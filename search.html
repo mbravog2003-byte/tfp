@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="css/style.css?v=2">
+    <link rel="stylesheet" href="css/style-mobile.css">
+
+    <!-- manifest.json -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#000000">
+</head>
+<body>
+    <header class="top-nav">
+        <nav class="main-menu main-menu-left">
+            <ul class="main-menu-nav">
+                <li><a href="#" class="menu">Menu</a></li>
+                <li><a href="index.html">Explore</a></li>
+                <li><a href="#">My Books</a></li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/graphics/logo.png" alt="logo" id="logo">
+            </a>
+        </div>
+        <nav class="main-menu main-menu-right">
+            <ul class="main-menu-nav">
+                <li><a href="search.html">Search</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="search-bar-fixed" id="search-bar-fixed">
+        <form class="search-form" action="search.html" method="get" role="search">
+            <label for="search-input" class="visually-hidden">Search for title or author</label>
+            <div class="search-input-with-clear">
+                <input type="search" id="search-input" name="q" placeholder="Search for title or author" class="search-input" autocomplete="off">
+                <button type="button" class="search-clear-btn" id="search-clear-btn" aria-label="Borrar búsqueda" title="Borrar">
+                    <img src="assets/graphics/cross-black.svg" alt="">
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <main>
+        <section class="search-results-section" id="search-results-section" aria-label="Search results">
+            <h2 id="search-results-heading">Search results</h2>
+            <div class="book-gallery" id="search-results-grid"></div>
+        </section>
+        <section class="search-all-books-section" id="search-all-books-section" aria-label="All books">
+            <h2>All books</h2>
+            <div class="book-gallery" id="all-books-grid"></div>
+        </section>
+    </main>
+
+    <div id="reading-list-overlay" class="reading-list-overlay">
+        <div class="reading-list-box">
+            <div class="reading-list-header">
+                <div class="reading-list-title">
+                    <h2>My reading lists</h2>
+                </div>
+                <a href="#" class="cross-icon" aria-label="Cerrar">
+                    <img src="assets/graphics/cross-black.svg" alt="cross">
+                </a>
+            </div>
+            <div class="reading-list-body">
+                <hr class="reading-list-separator">
+                <div class="reading-list-item">
+                    <div class="reading-list-cover">
+                        <img src="img/35.webp" alt="Hamnet Book Cover">
+                    </div>
+                    <div class="reading-list-info">
+                        <div class="number-list"><span>01</span></div>
+                        <div class="list-name"><span>Currently Reading</span></div>
+                    </div>
+                    <div class="add-to-list-button">
+                        <a href="#reading-list-overlay">Add to list</a>
+                    </div>
+                </div>
+                <hr class="reading-list-separator">
+                <div class="reading-list-item">
+                    <div class="reading-list-cover">
+                        <img src="img/36.webp" alt="Red City Book Cover">
+                    </div>
+                    <div class="reading-list-info">
+                        <div class="number-list"><span>02</span></div>
+                        <div class="list-name"><span>Want to read</span></div>
+                    </div>
+                    <div class="add-to-list-button">
+                        <a href="#reading-list-overlay">Add to list</a>
+                        <span class="added-feedback" aria-live="polite">Added!</span>
+                    </div>
+                </div>
+                <hr class="reading-list-separator">
+                <div class="reading-list-item">
+                    <div class="reading-list-cover">
+                        <img src="img/39.webp" alt="Martyr! Book Cover">
+                    </div>
+                    <div class="reading-list-info">
+                        <div class="number-list"><span>03</span></div>
+                        <div class="list-name"><span>Read</span></div>
+                    </div>
+                    <div class="add-to-list-button">
+                        <a href="#reading-list-overlay">Add to list</a>
+                    </div>
+                </div>
+                <hr class="reading-list-separator">
+                <div class="reading-list-item">
+                    <div class="reading-list-cover">
+                        <img src="img/52.webp" alt="The Night Circus Book Cover">
+                    </div>
+                    <div class="reading-list-info">
+                        <div class="number-list"><span>04</span></div>
+                        <div class="list-name"><span>DNF</span></div>
+                    </div>
+                    <div class="add-to-list-button">
+                        <a href="#reading-list-overlay">Add to list</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/search-page.js"></script>
+</body>
+</html>

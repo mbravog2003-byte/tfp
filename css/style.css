@@ -1,0 +1,2197 @@
+/*ESTILOS GENERALES*/
+
+@font-face {
+    font-family: ABC Walter grotesk;
+    src: url("../assets/fonts/ABCWalterAlte-Rauchwaren-Trial.woff2") format("woff2");
+    font-style: normal
+}
+
+@font-face {
+    font-family: ABC Walter;
+    src: url("../assets/fonts/ABCWalterAlte-Roentgentherapie-Trial.woff2") format("woff2");
+    font-style: normal
+}
+
+@font-face {
+    font-family: Fakt;
+    src: url("../assets/fonts/Fakt-Normal.woff") format("woff");
+    font-style: normal;
+    font-weight:normal;
+}
+
+    @font-face {
+        font-family: ES Face;
+        src: url(../assets/fonts/ES\ Aktuell\ Light.woff2) format("woff2");
+        font-style: italic;
+        font-weight: lighter;
+    }
+
+:root {
+    font-size: 62.5%; 
+  --primary-color: #000000;
+  --secondary-color: #ffffff;
+  --background-color: #ffffff;
+    --general-margin: 20px;
+    --general-gap: 1rem;
+    --spacing-s: 20px;
+    --spacing-m: 40px;
+    --text-body: 1.4rem;
+    --subtitles: 1.2rem;
+    --line-height-tight: 15px;
+    --overlay-blur: 8px;
+}
+
+
+
+body {
+    font-family: "Fakt", Arial, Helvetica, sans-serif;
+    color: var(--primary-color);
+    margin: 0;
+    overflow-x: hidden;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+/* Jerarquía base de títulos (se sobrescribe por contexto) */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+h1 {
+    font-family: "ABC Walter grotesk", "Fakt", Arial, Helvetica, sans-serif;
+    font-size: 2.25rem;
+    line-height: 1.2;
+}
+
+h2 {
+    font-family: "ABC Walter grotesk", "Fakt", Arial, Helvetica, sans-serif;
+    font-size: 1.75rem;
+    line-height: 1.3;
+}
+
+h3 {
+    font-family: "ABC Walter grotesk", "Fakt", Arial, Helvetica, sans-serif;
+    font-size: 1.35rem;
+    line-height: 1.35;
+}
+
+a {
+  color: var(--primary-color);
+    text-decoration: none;
+}
+
+main {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/*TOP NAV*/
+
+/*Menú mmobile escondido*/
+.main-menu .menu {
+    display: none;
+}
+
+.main-menu-left .main-menu-nav {
+    gap: 50px;
+}
+
+.main-menu-left .main-menu-nav li:first-child {
+    width: 0;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    margin-right: -50px;
+}
+
+
+
+.main-menu a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.main-menu a, .main-menu ul, .logo a {
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+}
+
+    .main-menu a {
+    display: inline-block;
+}
+
+.top-nav {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+        background-color: transparent;
+  
+        a {
+            font-family: "Fakt";
+            font-size: var(--subtitles);
+        }
+}
+
+.main-menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin: 15px 15px 15px 15px;
+}
+
+#logo {
+    width: 150px;
+    height: auto;
+}
+
+/* Search bar fija (solo en search.html): debajo del top nav, mismo color, sin separación, siempre visible */
+.search-bar-fixed {
+    width: 100%;
+    background-color: var(--secondary-color);
+    padding: 12px var(--general-margin);
+    box-sizing: border-box;
+}
+
+.search-bar-fixed .search-form,
+.search-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Contenedor input + cruz de borrar (solo en search.html) */
+.search-input-with-clear {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.search-bar-fixed .search-clear-btn {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-bar-fixed .search-clear-btn img {
+    width: 10px;
+    height: 10px;
+    display: block;
+}
+
+.search-input-with-clear .search-input {
+    padding-right: 22px;
+}
+
+.search-bar-fixed .search-input,
+.search-input {
+    width: 100%;
+    box-sizing: border-box;
+    font-family: "Fakt", Arial, Helvetica, sans-serif;
+    font-size: var(--subtitles);
+    padding: 4px 0;
+    border: 0;
+    border-bottom: 1px solid var(--primary-color);
+    border-radius: 0;
+    color: var(--primary-color);
+    background-color: transparent;
+}
+
+.search-bar-fixed .search-input::placeholder,
+.search-input::placeholder {
+    color: #666;
+}
+
+.search-bar-fixed .search-input:focus,
+.search-input:focus {
+    outline: none;
+    border-bottom-color: var(--primary-color);
+}
+
+/* Ocultar la cruz nativa que borra el input (página search.html). */
+.search-bar-fixed .search-input::-webkit-search-cancel-button,
+.search-input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+}
+
+/* Overlay de búsqueda: fondo blur como los demás overlays, barra blanca pegada arriba a todo ancho */
+.search-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    backdrop-filter: blur(var(--overlay-blur));
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.1s ease-in, visibility 0.1s ease-in;
+}
+
+.search-overlay:target {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.search-overlay-bar {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--secondary-color);
+    padding: 14px var(--general-margin);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-shrink: 0;
+}
+
+.search-overlay-form {
+    flex: 1;
+    margin: 0;
+    min-width: 0;
+}
+
+.search-overlay-input {
+    width: 100%;
+    box-sizing: border-box;
+    font-family: "Fakt", Arial, Helvetica, sans-serif;
+    font-size: var(--subtitles);
+    padding: 4px 0;
+    border: 0;
+    border-bottom: 1px solid var(--primary-color);
+    border-radius: 0;
+    color: var(--primary-color);
+    background-color: transparent;
+}
+
+.search-overlay-input::placeholder {
+    color: #666;
+}
+
+.search-overlay-input:focus {
+    outline: none;
+    border-bottom-color: var(--primary-color);
+}
+
+/* Ocultar la cruz nativa que borra el input (solo queda la X que cierra el overlay). */
+.search-overlay-input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+}
+
+.search-overlay-bar .cross-icon {
+    flex-shrink: 0;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Grid tipo book-gallery: 6 libros de ancho */
+.book-gallery {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: var(--general-gap);
+    row-gap: 4rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.search-results-section,
+.search-all-books-section {
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: var(--general-margin);
+    padding-right: var(--general-margin);
+}
+
+.search-all-books-section {
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+}
+
+.search-results-section h2,
+.search-all-books-section h2 {
+    margin-bottom: 1.5rem;
+    font-family: "ABC Walter grotesk", "Fakt", Arial, Helvetica, sans-serif;
+}
+
+
+/*-----------------------HOME-----------------------*/
+.still-life {
+    width: 100%;
+    height: auto;
+    max-height: 90vh;
+    object-fit: contain;
+    object-position: top;
+    margin-top: -5rem;
+}
+
+/*BOOK GRID 1 – Staples + Book Awards */
+
+.staples-section {
+width: 100%;
+    box-sizing: border-box;
+padding-left: var(--general-margin);
+padding-right: var(--general-margin);
+padding-bottom: var(--spacing-m);
+
+}
+
+.staples-section h1 {
+    margin: var(--general-margin) 0;
+    margin-top: var(--spacing-s);
+}
+
+.book-grid-container {
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    width: 100%;
+    margin: 0;
+    align-items: stretch;
+    gap: var(--general-gap);
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    row-gap: 4rem; /* solo gap horizontal entre columnas */
+    width: 100%;
+    column-gap: var(--general-gap); 
+}
+
+.book-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.book-card img {
+    width: 100%;
+height: auto;
+display: block;
+}
+
+/* Enlace que envuelve la imagen (ej. We Free the Stars): mismo tamaño que el resto */
+.book-card > a:first-child {
+    display: block;
+    margin-top: 0;
+}
+
+.book-card > a:first-child img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.book-card a {
+    margin-top: 0.5rem;
+    font-size: var(--subtitles);
+}
+
+.book-card > a:not(:first-child) {
+    margin-top: 0.5rem;
+}
+
+.book-award {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    min-height: 0;
+}
+
+.book-award img {
+    width: 100%;
+    max-width: 768px;
+    height: auto;
+    display: block;
+}
+
+     /* SWIPER */
+
+.swiper {
+  width: 100%;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.mySwiper .swiper-pagination-bullet-active {
+  background: #ff4d6d;
+}
+
+/*ARTICLE*/
+.article-container {
+    display: flex;
+    padding-top: var(--spacing-s);
+    padding-bottom: 100px;
+}
+
+
+.article-title {
+    flex: 1;
+    box-sizing: border-box;
+    padding-left: var(--general-margin);
+
+    font-family: "ABC Walter", "Fakt", Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    line-height: 30px;
+}
+
+.article-title h3 {
+    font-family: inherit;
+    font-size: 3rem;
+    line-height: 30px;
+}
+
+.article-text {
+    flex: 1;
+    box-sizing: border-box;
+    padding-right: var(--general-margin);
+    
+    font-family: "ABC Walter grotesk", "Fakt", Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    line-height: 23px;
+}
+
+.paragraph-1 {
+    text-indent: 2em;
+}
+
+.paragraph-2 {
+    text-indent: 2em;
+}
+
+/*BOOK GALLERY*/
+.gallery-container {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+
+    gap: var(--general-gap);
+    padding-left: var(--general-margin);
+    padding-right: var(--general-margin);
+
+    padding-bottom: var(--spacing-m);
+}
+
+/*GENRE CARDS*/
+
+.genre-container {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    box-sizing: border-box;
+    gap: var(--general-gap);
+    padding-bottom: var(--spacing-m);
+    padding-left: var(--general-margin);
+    padding-right: var(--general-margin);
+}
+
+
+.genre-card {
+    position: relative;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    min-width: 0;
+}
+
+.genre-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.genre-name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: var(--text-body);
+    color: var(--secondary-color);
+    text-align: center;
+    font-family: "ABC Walter grotesk", "Fakt", Arial, Helvetica, sans-serif;
+    
+}
+
+.popular-genres,
+.most-reviewed {
+    font-family: "ABC Walter grotesk", "Fakt", Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    padding-bottom: 10px;
+    margin: var(--general-margin);
+}
+
+
+/*PHOTO SECTIONS*/
+
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.img-container {
+    position: relative;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    min-width: 0;
+    aspect-ratio: 1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 4rem 12rem 0rem;
+    text-align: center;
+    gap: 0.75rem;
+}
+
+.img-left {
+    background-image: url("../img/48.png");
+}
+
+.img-right {
+    background-image: url("../img/49.png");
+}
+
+.img-right h3,
+.img-right p {
+    color: var(--secondary-color);
+}
+
+.img-right .button-img {
+    color: var(--secondary-color);
+}
+
+.img-right .button-img:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.img-container h3 {
+    font-family: "ABC Walter grotesk", "Fakt", Arial, Helvetica, sans-serif;
+    font-size: var(--text-body);
+    text-align: center;
+    margin: 0;
+}
+
+.img-container p {
+    font-family: "Fakt", Arial, Helvetica, sans-serif;
+    font-size: var(--text-body);
+    line-height: var(--line-height-tight);
+    text-align: center;
+    margin: 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    box-sizing: border-box;
+}
+
+.button-img {
+    display: inline-block;
+    font-family: "Fakt", Arial, Helvetica, sans-serif;
+    font-size: var(--text-body);
+    text-align: center;
+}
+
+.button-img:hover {
+    text-decoration: underline;
+}
+
+/*FOOTER*/
+
+.newsletter {
+    display: flex;
+    flex-direction: column;
+}
+
+.newsletter-link {
+    display: none;
+}
+
+.newsletter-fields {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer {
+    display: flex;
+    flex-direction:column;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.footer-column-container {
+    display: flex;
+    flex-direction: row;
+    gap: var(--general-gap);
+    width: 100%;
+    padding-bottom: 160px;
+
+    a, p{
+        font-family: "Fakt", Arial, Helvetica, sans-serif;
+        font-size: var(--subtitles);
+    }
+}
+
+.footer-column {
+    flex: 1;
+    padding: none;
+}
+
+.footer ul {
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+.logo-footer-container img {
+    width: 100%;
+}
+
+.footer-about {
+    padding-bottom: var(--spacing-s);
+}
+
+/*Todos los hijos de esa clase, aplicale flex: 1*/
+.footer-column-container * {
+    flex: 1;
+}
+
+/*ESTILOS NEWSLETTER*/
+
+.newsletter {
+    flex: 2;
+}
+.newsletter-fields {
+    gap: 10px;
+    padding-bottom: var(--spacing-s);
+}
+
+
+.newsletter label {
+    font-family: "Fakt", Arial, Helvetica, sans-serif;
+    font-size: var(--subtitles);
+    padding-bottom: var(--spacing-s);
+}
+
+.newsletter input[type="email"], .newsletter input[type="text"] {
+    font-family: "Fakt", Arial, Helvetica, sans-serif;
+    font-size: var(--subtitles);
+    color: var(--primary-color);
+    border: none;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.newsletter input {
+    padding: 0;
+}
+.newsletter input:focus {
+    outline: none;
+}
+
+.newsletter-button {
+    border: none;
+    font-size: var(--subtitles);
+    background-color: var(--secondary-color);
+    align-self: flex-start;
+    padding: 0;
+}
+
+.newsletter-button:hover {
+    text-decoration: underline;
+}
+.footer {
+    box-sizing: border-box;
+    padding-top: var(--spacing-s);
+    padding-left: var(--spacing-s);
+    padding-right: var(--spacing-s);
+    padding-bottom: 5px;
+}
+
+
+/*-----------------------BOOK PAGE--------------------------*/
+
+.book-page-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--general-gap);
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: var(--general-margin);
+    padding-right: var(--general-margin);
+    padding-bottom: var(--spacing-m);
+}
+
+.left-column, .right-column {
+    flex: 1;
+    min-width: 280px;
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.book-cover {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+}
+
+.book-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*Columna izquierda*/
+.book-general-info {
+    display: flex;
+    flex-direction: row;
+    gap: 10px; 
+    padding-bottom: 10px;
+}
+
+.book-header {
+    flex: 1.5; 
+    max-width: 300px;
+
+    p {
+        font-size: var(--subtitles);
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+.author-info {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    p {
+        font-family: "ABC Walter grotesk", "Fakt", Arial, Helvetica, sans-serif;
+        font-size: 1.6rem;
+        line-height: 17px;
+    }
+
+    h2 {
+        font-family: "ABC Walter grotesk", "Fakt", Arial, Helvetica, sans-serif;
+        font-size: var(--text-body);
+        padding-bottom: 8px;
+    }
+
+}
+
+
+.book-buttons {
+    display: flex;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+
+.add-to-list,
+.review-now {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: var(--primary-color) 1px solid;
+    border-radius: 20px;
+    background-color: var(--secondary-color);
+    padding: 6px 10px;
+    font-size: var(--subtitles);
+}
+
+.add-to-list:hover,
+.review-now:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+/*Portada imagen*/
+.book-cover {
+    box-sizing: border-box;
+    padding-bottom: 10px;
+}
+
+
+.book-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 2.5rem;
+
+    p {
+        font-family: "Fakt", Arial, Helvetica, sans-serif;
+        font-size: var(--subtitles);
+        line-height: var(--line-height-tight);
+    }
+}
+
+.book-info-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 3rem;
+    min-width: 0;
+}
+
+.stars {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.star-count p {
+    margin: 0;
+}
+
+
+
+
+/*Columna derecha*/
+
+.book-number {
+    font-size: var(--subtitles);
+}
+.paragraph {
+    padding-bottom: var(--spacing-m);
+}
+.paragraph p {
+    font-family: "ABC Walter grotesk", "Fakt", Arial, Helvetica, sans-serif;
+    font-size: 1.9rem;
+    line-height: 20px;
+    text-indent: 2.5em;
+}
+
+.book-details {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 40px;
+    width: 100%;
+}
+
+.book-detail-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.book-detail-item .detail-label {
+    font-family: "Fakt", Arial, Helvetica, sans-serif;
+    font-size: var(--subtitles);
+}
+
+.book-detail-item .detail-value {
+    font-family: "ABC Walter grotesk", "Fakt", Arial, Helvetica, sans-serif;
+    font-size: var(--text-body);
+    line-height: 1.5rem;
+}
+
+.book-detail-item:not(:first-child) {
+    border-left: 1px solid var(--primary-color);
+    padding-left: var(--spacing-s);
+}
+
+/*Más de la autora*/
+.right-column-author {
+    flex: 1;
+    min-width: 785px;
+}
+
+.series-container {
+    display: flex;
+    flex-direction: row;
+    gap: var(--general-gap);
+    margin-left: var(--general-margin);
+    margin-right: 10px;
+}
+
+.book-title {
+    font-family: "ABC Walter grotesk", "Fakt", Arial, Helvetica, sans-serif;
+    font-size: var(--text-body);
+}
+
+.arawiya-series-h2 {
+    font-family: "ABC Walter grotesk", "Fakt", Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    padding-bottom: 10px;
+    margin-left: var(--general-margin);
+}
+
+.more-author-h2 {
+    font-family: "ABC Walter grotesk", "Fakt", Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    padding-bottom: 10px;
+}
+
+.author-other-books {
+    display: flex;
+    flex-direction: row;
+}
+
+.author-other-books {
+    margin-right: var(--general-margin);
+    margin-left: 0;
+    gap: var(--general-gap);
+}
+
+.more-from-author {
+    display: flex;
+    flex-direction: row;
+
+    padding-bottom: 200px;
+}
+
+/*QUOTES*/
+
+.quote-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: var(--general-gap);
+    margin: var(--general-margin);
+    padding-bottom: var(--spacing-m);
+}
+
+.quote-card {
+    flex: 1;
+    min-width: 0;
+    gap: 0;
+}
+
+
+.quote-h2 {
+    font-family: "ABC Walter grotesk", "Fakt", Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    padding-bottom: 10px;
+    margin: var(--general-margin);
+}
+
+.quote-card p {
+    font-family: "ABC Walter grotesk", "Fakt", Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    line-height: 17px;
+}
+
+
+/*RESEÑAS*/
+
+/*Container general reseñas*/
+.reviews {
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-m);
+    justify-content: space-between;
+    margin-left: var(--general-margin);
+    margin-right: var(--general-margin);
+    padding-bottom: var(--spacing-m);
+}
+
+/* Columna izquierda de la sección reseñas: título "Reviews", valoración 4.5 y desglose por estrellas */
+.review-stars-container {
+    flex: 1;
+}
+
+/* Columna derecha: "This book is...", tags y trigger warnings */
+.book-tags {
+    flex: 1;
+}
+
+
+.star-rating {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.review-h2 {
+    font-family: "ABC Walter grotesk", "Fakt", Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+}
+
+.review-count {
+    font-family: "Fakt", Arial, Helvetica, sans-serif;
+    font-size: var(--subtitles);
+    line-height: var(--line-height-tight);
+}
+
+.average-rating {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.review-stars {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/*GRÁFICO RESEÑAS*/
+.review-breakdown {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+
+    p {
+        line-height: 20px;
+    }
+}
+
+.review-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.average-rating {
+    align-items: center;
+}
+
+.review-star {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    padding:0;
+    margin:0;
+}
+
+.review-number {
+    min-width: 1.5rem;
+    font-size: var(--subtitles);
+}
+
+.review-bar {
+    flex: 1;
+    height: 5px;
+    background-color: rgb(235, 235, 235);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.review-bar-fill {
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+}
+
+.review-percent {
+    min-width: 2.5rem;
+    text-align: right;
+    font-size: var(--subtitles);
+}
+
+/*ETIQUIETAS LIBRO*/
+
+.this-book-is-h2, .trigger-warning-h2 {
+    font-family: "ABC Walter grotesk", "Fakt", Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    padding-bottom: 10px;
+}
+
+.this-book-is {
+    padding-bottom: 20px;
+}
+.book-tag-container, .trigger-warning-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: var(--general-gap);
+}
+
+.book-tag {
+    font-size: var(--subtitles);
+    width: fit-content;
+    background-color: rgb(235, 235, 235);
+    padding: 8px 15px;
+    border-radius: 40px;
+}
+
+.book-trigger {
+    font-size: var(--subtitles);
+    width: fit-content;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    padding: 8px 15px;
+    border-radius: 40px;
+}
+
+/*COMENTARIOS Y RESEÑAS*/
+
+.user-review {
+    margin-left: var(--general-margin);
+    margin-right: var(--general-margin);
+}
+
+.review-card-container {
+    display: flex;
+    flex-direction: row;  
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    gap: var(--spacing-m);
+    padding-right: 500px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+}
+
+.review-author {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+
+    .review-author-name {
+        font-family: "ABC Walter grotesk", "Fakt", Arial, Helvetica, sans-serif;
+        font-size: var(--text-body);
+    }
+
+    .review-date {
+        font-family: "Fakt", Arial, Helvetica, sans-serif;
+        font-size: var(--subtitles);
+    }
+}
+
+.review-author img {
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.review-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    p {
+        font-family: "ABC Walter grotesk", "Fakt", Arial, Helvetica, sans-serif;
+        font-size: var(--text-body);
+        line-height: var(--line-height-tight);
+        padding-bottom: var(--spacing-s);
+    }
+}
+
+.review-icon img {
+    width: 50px;
+    height: auto;
+}
+
+.review-user-stars img {
+    width: 130px;
+    height: auto;
+
+}
+
+.more {
+    font-family: "ABC Walter grotesk", "Fakt", Arial, Helvetica, sans-serif;
+    font-size: var(--text-body);
+    text-align: center;
+    padding-top: var(--spacing-s);
+    text-decoration: underline;
+}
+
+/*Sección general reseñas usuarios*/
+.user-review {
+    margin-bottom: 100px;
+    cursor: pointer;
+}
+
+/*Galería libros pre footer*/
+.similar-h2 {
+    font-family: "ABC Walter grotesk", "Fakt", Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    margin-left: var(--general-margin);
+    padding-bottom: var(--spacing-s)
+}
+
+.gallery-container {
+    padding-bottom: 100px;
+}
+
+/* Overlay "My reading lists" */
+.reading-list-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    backdrop-filter: blur(var(--overlay-blur));
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.1s ease-in, visibility 0.1s ease-in;
+}
+
+.reading-list-overlay:target {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.reading-list-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 620px;
+    max-height: auto;
+    overflow-y: auto;
+    box-sizing: border-box;
+    background: var(--secondary-color);
+    border: 1px solid #eeeeee;
+    min-width: 0;
+    padding: 10px;
+    padding-bottom: 0;
+}
+
+
+/*Estilos overlay */
+.reading-list-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: fit-content;
+    overflow: visible;
+}
+
+.reading-list-body {
+    width: 100%;
+    min-width: 0;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+
+.reading-list-separator {
+    border: none;
+    border-top: 1px solid var(--primary-color);
+    flex-shrink: 0;
+    margin: 0;
+}
+
+.reading-list-cover {
+    width: 80px;
+    min-width: 80px;
+    flex-shrink: 0;
+}
+
+.reading-list-cover img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    object-fit: contain;
+}
+
+.reading-list-title-h2 {
+    font-family: "ABC Walter grotesk", "Fakt", Arial, Helvetica, sans-serif;
+    font-size: var(--text-body);
+    line-height: 1.3;
+    margin: 0;
+    padding: 0;
+}
+
+.number-list, .list-name, .add-to-list-button {
+    font-family: "ABC Walter grotesk", "Fakt", Arial, Helvetica, sans-serif;
+    font-size: var(--text-body);
+}
+
+.number-list p,
+.list-name p {
+    margin: 0;
+    padding: 0;
+}
+
+.reading-list-item {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    min-width: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+    gap: var(--general-gap);
+}
+
+.reading-list-info {
+    display: flex;
+    flex-direction: row;
+    gap: var(--general-gap);
+}
+
+.add-to-list-button {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.add-to-list-button a {
+    font-family: "Fakt", Arial, Helvetica, sans-serif;
+    border: var(--primary-color) 1px solid;
+    border-radius: 20px;
+    background-color: var(--secondary-color);
+    padding: 6px 40px;
+    font-size: var(--subtitles);
+    display: inline-block;
+}
+
+.add-to-list-button a:hover {
+    border-radius: 20px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 6px 40px;
+    font-size: var(--subtitles);
+}
+
+.add-to-list-button a.is-added {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    box-sizing: border-box;
+ 
+}
+
+.add-to-list-button a.is-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+    background-color: #ccc;
+    border-color: #999;
+    color: #666;
+}
+
+.add-to-list-button .added-feedback {
+    display: none;
+    font-family: "Fakt", Arial, Helvetica, sans-serif;
+    font-size: var(--subtitles);
+    margin-top: 0.5rem;
+    align-self: center;
+}
+
+.add-to-list-button .added-feedback.is-visible {
+    display: block;
+    justify-content: center;
+}
+
+
+/*REVIEW FORM OVERLAY*/
+
+.form-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    backdrop-filter: blur(var(--overlay-blur));
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.1s ease-in, visibility 0.1s ease-in;
+}
+
+.form-overlay:target {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.review-overlay {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 680px;
+    height: 100%;
+    max-height: 100vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+    background: #0d0d0d;
+    min-width: 0;
+    padding: var(--spacing-s);
+}
+
+.form-separator {
+    border: 0.25px solid var(--secondary-color);
+    flex-shrink: 0;
+    margin: 0;
+    margin-top: 10px;;
+    margin-bottom: 10px;
+}
+
+/*Estilos form reseña*/
+.review-overlay-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.how-was-the-book {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.review-stars-vue-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.review-stars-vue .vue-star-rating {
+    display: inline-flex;
+}
+
+.review-stars-vue .vue-star-rating-star svg {
+    display: block;
+}
+
+.stars-container.star-rating-widget {
+    position: relative;
+    display: inline-block;
+    width: 155px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.stars-container.star-rating-widget .stars-outline {
+    display: block;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.stars-container.star-rating-widget .stars-fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    background: url("../assets/graphics/stars-white-filled.svg") left center / 155px 25px no-repeat;
+}
+
+.stars-container.star-rating-widget .stars-hit {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.review-dates {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-width: 0;
+    align-items: center;
+    column-gap: 2rem;
+}
+
+.review-dates .date-field {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+/* Segundo date-field: anclado a la derecha, ancho = contenido (sin espacio sobrante) */
+.review-dates > .date-field:nth-child(2) {
+    flex: 0 0 auto;
+    width: max-content;
+    margin-left: auto;
+}
+
+.review-dates > .date-field:nth-child(2) input {
+    width: 11ch;
+    min-width: 11ch;
+    box-sizing: content-box;
+}
+
+.review-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 300px;
+}
+
+.review-overlay-title-h2,
+.review-overlay .review-overlay-title h2 {
+    font-family: "ABC Walter grotesk", "Fakt", Arial, Helvetica, sans-serif;
+    font-size: var(--text-body);
+    color: var(--secondary-color);
+}
+
+label {
+    font-family: "ABC Walter grotesk", "Fakt", Arial, Helvetica, sans-serif;
+    font-size: var(--text-body);    
+}
+
+input[type="text"], textarea {
+    color: var(--secondary-color);
+    background-color: transparent;
+    border: none;
+}
+
+/* Tipografía inputs del form de review (book-page) */
+.review-overlay input[type="text"],
+.review-overlay textarea {
+    font-family: "ABC Walter grotesk", "Fakt", Arial, Helvetica, sans-serif;
+    font-size: var(--text-body);
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+textarea {
+    resize: none;
+}
+
+.review-section-title {
+    font-family: "ABC Walter grotesk", "Fakt", Arial, Helvetica, sans-serif;
+    font-size: var(--text-body);  
+}
+
+.review-overlay label,
+.review-section-title p {
+    color: var(--secondary-color);
+}
+
+/*Tags*/
+.review-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    column-gap: 20px;
+    row-gap: 1rem;
+}
+
+.review-tag {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    color: var(--secondary-color);
+    font-family: "Fakt", Arial, Helvetica, sans-serif;
+    font-size: var(--subtitles);
+}
+
+.review-tag:hover {
+    text-decoration: underline;
+}
+
+.review-tag.is-selected {
+    text-decoration: underline;
+}
+
+/*More thoughts*/
+
+textarea::placeholder {
+    color: var(--secondary-color);
+    font-size: var(--text-body);
+    font-family: "ABC Walter gotesk", "Fakt", Arial, Helvetica, sans-serif;
+    opacity: 0.5;
+}
+
+.review-more-thoughts {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0;
+    min-height: 0;
+}
+
+.review-more-thoughts textarea {
+    width: 100%;
+    flex: 1 1 0;
+    min-height: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+/*Mensaje Saved*/
+
+.review-saved-message {
+    font-family: "Fakt", Arial, Helvetica, sans-serif;
+    font-size: var(--subtitles);
+    color: var(--secondary-color);
+    margin: 0 0 0.5rem 0;
+    opacity: 1;
+    transition: opacity 0.35s ease-out;
+}
+
+.review-saved-message.review-saved-message--fade-out {
+    opacity: 0;
+}
+
+.review-saved-message[hidden] {
+    display: none;
+}
+
+/*Botones form*/
+
+.review-form-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+
+}
+
+.review-form-buttons button {
+    flex: 1;
+    font-family: "Fakt", Arial, Helvetica, sans-serif;
+    color: var(--secondary-color);
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid var(--secondary-color);
+    border-radius: 20px;
+    padding: 6px 10px;
+}
+
+.review-form-buttons button:hover {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    border: none;
+
+}
+
+/*---------------------PROFILE-----------------------*/
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: clamp(2rem, 20vw, 300px);
+    margin-left: var(--general-margin);
+    margin-right: var(--general-margin);
+    padding-top: var(--spacing-m);
+    padding-bottom: var(--spacing-m);
+    min-width: 0;
+    flex-wrap: wrap;
+}
+
+.profile-pic-container {
+    display: flex;
+    flex-direction: row;
+    gap: var(--general-gap);
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.profile-pic img {
+    width: clamp(48px, 8vw, 60px);
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.name {
+    font-family: "ABC Walter grotesk", "Fakt", Arial, Helvetica, sans-serif;
+    font-size: var(--text-body);
+}
+
+.user-name {
+    font-family: "Fakt", Arial, Helvetica, sans-serif;
+    font-size: var(--subtitles);
+}
+
+.bio {
+    min-width: 0;
+    flex: 1 1 0%;
+}
+
+.bio p {
+    font-family: "ABC Walter grotesk", "Fakt", Arial, Helvetica, sans-serif;
+    font-size: var(--text-body);
+}
+
+.profile-follows {
+    display: flex;
+    flex-direction: row;
+    gap: clamp(1rem, 2vw, 20px);
+    flex-shrink: 0;
+}
+
+.profile-follows p {
+    font-family: "ABC Walter grotesk", "Fakt", Arial, Helvetica, sans-serif;
+    font-size: var(--text-body);
+}
+
+/*LISTA LECTURA: READING*/
+
+.reading {
+    margin-left: var(--general-margin);
+    margin-right: var(--general-margin);
+    min-width: 0;
+    margin-bottom: 60px;
+}
+
+.reading h1 {
+    font-family: "ABC Walter grotesk", "Fakt", Arial, Helvetica, sans-serif;
+    font-size: var(--text-body);
+    padding-bottom: 5px;
+}
+
+
+.reading-list {
+    padding-top: 8px;
+    padding-bottom: 5px;
+}
+
+
+.reading-list-book {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: start;
+}
+
+.reading-list-details-container {
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 0;
+    min-width: 0;
+    gap: 10rem; /*espaciado entre details y botones (Reading)*/
+    align-items: start;
+}
+
+.reading-list-details-container .reading-list-details {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.reading-list-details-container .list-actions {
+    flex: 0 0 36%;
+    width: 36%;
+    min-width: 0;
+}
+
+.book-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: var(--general-gap);
+}
+
+.list-number {
+    font-family: "ABC Walter grotesk", "Fakt", Arial, Helvetica, sans-serif;
+    font-size: var(--text-body);
+}
+
+.reading-list-book-cover img {
+    width: 150px;
+    height: auto;
+}
+
+/* Details: título/autor/fecha arriba; sinopsis debajo; responsive con porcentajes */
+.reading-list-details,
+.list-details {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    column-gap: 30px;
+    row-gap: 1.25rem;
+    align-items: start;
+    justify-content: space-between;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    min-width: 0;
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+}
+
+.reading-list-details > h2,
+.list-details > h2 {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.reading-list-details > p:nth-child(2),
+.list-details > p:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.reading-list-details > p:nth-child(3),
+.list-details > p:nth-child(3) {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.reading-list-details .sinopsis,
+.reading-list-details .want-to-read-sinopsis,
+.list-details .sinopsis,
+.list-details .want-to-read-sinopsis {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    min-width: 0;
+}
+
+.reading-list-details > *,
+.list-details > * {
+    min-width: 0;
+    overflow: visible;
+    text-overflow: clip;
+    white-space: normal;
+}
+
+.sinopsis,
+.want-to-read-sinopsis {
+    max-width: 100%;
+    padding-right: 6rem;
+}
+
+.reading-list-details p,
+.reading-list-details h2,
+.list-details p,
+.list-details h2 {
+    font-family: "ABC Walter grotesk", "Fakt", Arial, Helvetica, sans-serif;
+    font-size: var(--text-body);
+    min-width: 0;
+    line-height: var(--line-height-tight);
+}
+
+.list-actions {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 auto;
+    min-width: 0;
+    align-items: flex-end;
+    margin-left: auto;
+    box-sizing: border-box;
+}
+
+.list-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: var(--spacing-s);
+    width: 100%;
+    min-width: 0;
+}
+
+.list-button a,
+.list-button button {
+    font-family: "Fakt", Arial, Helvetica, sans-serif;
+    font-size: var(--subtitles);
+    white-space: nowrap;
+    border: var(--primary-color) 1px solid;
+    border-radius: 20px;
+    background-color: var(--secondary-color);
+    padding: 0.5rem 1rem;
+    flex: 1 1 0%;
+    min-width: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.list-button button {
+    border: none;
+    background-color: transparent;
+    border: var(--primary-color) 1px solid;
+    background-color: var(--secondary-color);
+}
+
+.list-button a:hover, .list-button button:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.sinopsis,
+.want-to-read-sinopsis {
+    white-space: normal;
+}
+
+
+.want-to-read-list,
+.read-list {
+    margin-left: var(--general-margin);
+    margin-right: var(--general-margin);
+}
+
+.want-to-read-list {
+    padding-bottom: var(--spacing-m);
+}
+
+.list-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.book-list-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: start;
+    padding-top: 8px;
+    padding-bottom: 5px;
+    min-width: 0;
+}
+
+/* Contenido junto a la portada: list-content (Read) o list-actions (Want to read / DNF) */
+.book-list-container .list-content,
+.book-list-container .list-actions {
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 0;
+    min-width: 0;
+    gap: 10rem;
+    align-items: start;
+}
+
+.book-list-container .list-content .list-details,
+.book-list-container .list-actions .list-details {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+@media screen and (min-width: 769px) {
+    .book-list-container .list-actions .book-list-actions {
+        flex: 0 0 35%;
+        width: 35%;
+        min-width: 0;
+    }
+}
+
+/* Read: columna más ancha para que, restando estrellas, el list-button quede ~35% como el resto */
+.read-list .list-content .list-actions {
+    flex: 0 0 38.5%;
+    width: 42%;
+    min-width: 0;
+}
+
+.read-list .list-content .list-actions .list-button {
+    flex: 1 1 0%;
+    min-width: 0;
+    width: 100%;
+}
+
+.book-list-book-cover img {
+    max-width: 100px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.book-list-actions {
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 0%;
+    min-width: 0;
+}
+
+.book-list-actions a,
+.book-list-button {
+    font-family: "Fakt", Arial, Helvetica, sans-serif;
+    font-size: var(--subtitles);
+    white-space: nowrap;
+    border: var(--primary-color) 1px solid;
+    border-radius: 20px;
+    background-color: var(--secondary-color);
+    padding: 0.5rem 1rem;
+    flex: 1 1 0%;
+    min-width: 0;
+    box-sizing: border-box;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.book-list-button {
+    border: none;
+    background-color: transparent;
+    border: var(--primary-color) 1px solid;
+    background-color: var(--secondary-color);
+}
+
+.book-list-actions a:hover,
+.book-list-button:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+/* Want to read */
+
+.want-to-read-sinopsis {
+    padding: 0 6rem 0 0;
+}
+
+
+.want-to-read-list > h2 {
+    font-family: "ABC Walter grotesk", "Fakt", Arial, Helvetica, sans-serif;
+    font-size: var(--text-body);
+    min-width: 0;
+    line-height: var(--line-height-tight);
+    padding-bottom: 5px;
+}
+
+/* Read */
+
+.read-list {
+    padding-bottom: var(--spacing-m);
+}
+
+.read-list > h2 {
+    font-family: "ABC Walter grotesk", "Fakt", Arial, Helvetica, sans-serif;
+    font-size: var(--text-body);
+    min-width: 0;
+    line-height: var(--line-height-tight);
+    padding-bottom: 5px;
+}
+
+.read-date {
+    max-width: 200px;
+}
+
+/* Read: mismo contenedor list-actions que Reading (estrellas + botones) */
+.read-list .list-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem; /* espacio entre estrella y botones (Read) */
+}
+
+.read-list .list-actions .list-button {
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 0%;
+    min-width: 0;
+}
+
+.read-list .list-actions .list-button a,
+.read-list .list-actions .list-button .reading-book-list-button {
+    font-family: "Fakt", Arial, Helvetica, sans-serif;
+    font-size: var(--subtitles);
+    white-space: nowrap;
+    border: var(--primary-color) 1px solid;
+    border-radius: 20px;
+    background-color: var(--secondary-color);
+    padding: 0.5rem 1rem;
+    flex: 1 1 0%;
+    min-width: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.read-list .list-actions .list-button .reading-book-list-button {
+    border: none;
+    background-color: transparent;
+    border: var(--primary-color) 1px solid;
+    background-color: var(--secondary-color);
+}
+
+.read-list .list-actions .list-button a:hover,
+.read-list .list-actions .list-button .reading-book-list-button:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.user-review-list {
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+    align-items: baseline;
+    justify-content: flex-start;
+    flex: 0 0 auto;
+    margin-left: auto;
+    padding-right: 20px;
+}
+
+.user-review-list p {
+    margin: 0;
+}
+
+.user-review-list p.review-star-list {
+    font-size: 2rem;
+    line-height: 1;
+}
+
+
+.review-star-number {
+    font-family: "ABC Walter grotesk", "Fakt", Arial, Helvetica, sans-serif;
+    font-size: var(--text-body);
+}
+
+/*DNF*/
+
+.dnf-list {
+    margin-left: var(--general-margin);
+    margin-right: var(--general-margin);
+    padding-bottom: 230px;
+    box-sizing: border-box;
+}
+
+.dnf-list > h2 {
+    font-family: "ABC Walter grotesk", "Fakt", Arial, Helvetica, sans-serif;
+    font-size: var(--text-body);
+    min-width: 0;
+    line-height: var(--line-height-tight);
+    padding-bottom: 5px;
+}

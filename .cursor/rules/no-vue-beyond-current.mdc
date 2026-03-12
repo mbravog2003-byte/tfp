@@ -1,0 +1,12 @@
+---
+description: No usar Vue para nada más allá de lo ya implementado (estrellas reseña en book-page)
+globs: "**/*.js"
+alwaysApply: true
+---
+
+# Vue: uso limitado
+
+No uses Vue para ninguna funcionalidad nueva. Vue solo se usa en **book-page** para la valoración con estrellas (vue-star-rating) en el overlay del formulario de reseña.
+
+- Cualquier interacción o feature nueva debe implementarse con **JavaScript vanilla** (sin Vue).
+- No añadas nuevos componentes Vue, ni montes Vue en otras páginas o contenedores.

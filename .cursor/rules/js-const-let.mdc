@@ -1,0 +1,37 @@
+---
+description: No usar var; usar const o let según sea necesario
+globs: "**/*.js"
+alwaysApply: false
+---
+
+# JavaScript: const y let (no var)
+
+No uses `var`. Usa `const` o `let` según sea necesario.
+
+- **`const`**: cuando la referencia no se reasigna (objetos/arrays pueden mutar por dentro; la variable no se reasigna).
+- **`let`**: cuando la variable se reasigna (p. ej. contadores en bucles, acumuladores).
+
+```javascript
+// ❌ BAD
+var list = getItems();
+var i;
+for (i = 0; i < list.length; i++) {
+  var item = list[i];
+}
+
+// ✅ GOOD
+const list = getItems();
+for (let i = 0; i < list.length; i++) {
+  const item = list[i];
+}
+```
+
+```javascript
+// ❌ BAD
+var path = imgSrc || '';
+path = 'img/' + path;
+
+// ✅ GOOD
+let path = imgSrc || '';
+path = 'img/' + path;
+```

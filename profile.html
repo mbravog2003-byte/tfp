@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="css/style.css?v=2">
+    <link rel="stylesheet" href="css/style-mobile.css">
+
+    <!-- manifest.json -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#000000">
+</head>
+<body>
+    <header class="top-nav">
+
+        <nav class="main-menu main-menu-left">
+            <ul class="main-menu-nav">
+                <!--<li><a href="index.html" class="active">Explore</a></li> Para cuando el link esté activo-->
+                <li><a href="#" class="menu">Menu</a></li>
+                <li><a href="index.html">Explore</a></li>
+                <li><a href="#">My Books</a></li>
+            </ul>
+        </nav>
+
+        <div class="logo">
+            <a href="#">
+                <img src="assets/graphics/logo.png" alt="logo" id="logo">
+            </a>
+        </div> 
+
+        <nav class="main-menu main-menu-right">
+            <ul class="main-menu-nav">
+                <li><a href="#search-overlay">Search</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="search-overlay" class="search-overlay">
+        <div class="search-overlay-bar">
+            <form class="search-overlay-form" action="search.html" method="get" role="search">
+                <label for="search-overlay-input" class="visually-hidden">Search for title or author</label>
+                <input type="search" id="search-overlay-input" name="q" placeholder="Search for title or author" class="search-overlay-input" autocomplete="off">
+            </form>
+            <a href="#" class="cross-icon" aria-label="Cerrar">
+                <img src="assets/graphics/cross-black.svg" alt="">
+            </a>
+        </div>
+    </div>
+
+    <main>
+        <section>
+            <div class="profile">
+
+               <div class="profile-pic-container">
+                    <div class="profile-pic">
+                        <img src="img/54.webp" alt="Profile picture">
+                    </div>
+                        
+                    <div class="profile-data">  
+                        <p class="name">Hanna</p>
+                        <p class="user-name">@becauseofnyc</p>
+                    </div>
+                </div>
+
+                <div class="bio">
+                    <p>Reader of thriller, literary fiction, and everything in between. <br> Tracking pages, moods, and memorable lines.</p>
+                </div>
+
+                <div class="profile-follows">
+                    <p>468 followers</p>
+                    <p>135 following</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="reading">
+            <h1>Reading</h1>
+            <hr class="reading-list-separator">
+            <div class="reading-list">
+                <article class="reading-list-book">
+                    
+                    <div class="book-list">
+                        <span class="list-number">01</span>
+
+                        <div class="reading-list-book-cover">
+                            <img srcset="img/35.webp" alt="Hamnet Book Cover">
+                        </div>
+
+                    </div>
+
+                    <div class="reading-list-details-container">
+                        <div class="reading-list-details">
+                            <h2>Hamnet</h2>
+                            <p>Maggie O'Farrell</p>
+                            <p>2020</p>
+                            <p class="sinopsis">Set in 1580s Warwickshire, "Hamnet" reimagines the family life behind one of William Shakespeare's most mysterious plays. The novel follows Agnes, a woman known for her unusual gifts, as she builds a life with her husband and their three children in Stratford. When their son Hamnet dies at eleven, the family is devastated by grief. Years later, that loss echoes in the writing of Hamlet. In lyrical, intimate prose, Maggie O'Farrell restores emotional depth to a story long left in the margins of history.</p>
+                        </div>
+
+                        <div class="list-actions">
+                            <div class="list-button">
+                                <a href="#review-form-overlay">Review</a>
+                                <button type="button">Delete book</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </article>
+            </div>
+            <hr class="reading-list-separator">
+        </section>
+
+        <section class="want-to-read-list">
+            <h2>Want to read</h2>
+            <hr class="reading-list-separator">
+            <div class="list-container">
+                <article class="book-list-container">
+                    
+                    <div class="book-list">
+                        <span class="list-number">01</span>
+
+                        <div class="book-list-book-cover">
+                            <img srcset="img/36.webp" alt="Red City Book Cover">
+                        </div>
+
+                    </div>
+
+                    <div class="list-actions">
+                        <div class="list-details">
+                            <h2>Red City</h2>
+                            <p>Marie Lu</p>
+                            <p>2026</p>
+                            <p class="want-to-read-sinopsis">Red City is a dark contemporary fantasy set in an alternate Los Angeles where rival crime syndicates control alchemy, a hidden craft used to produce a drug that “perfects” its users. Childhood friends Sam and Ari become enemies within opposing factions as a fragile peace collapses, forcing them to confront the personal cost of ambition and power in a city where transformation comes at a deadly price.</p>
+                        </div>
+                        <div class="book-list-actions">
+                            <a href="#reading-list-overlay">Move to list</a>
+                            <button type="button" class="book-list-button">Delete book</button>
+                        </div>
+                    </div>
+
+                </article>
+
+                <hr class="reading-list-separator">
+
+                <article class="book-list-container">
+                    
+                    <div class="book-list">
+                        <span class="list-number">02</span>
+
+                        <div class="book-list-book-cover">
+                            <img srcset="img/37.webp" alt="Gifted & Talented Book Cover">
+                        </div>
+
+                    </div>
+
+                    <div class="list-actions">
+                        <div class="list-details">
+                            <h2>Gifted & Talented</h2>
+                            <p>Olivie Blake</p>
+                            <p>2025</p>
+                            <p class="want-to-read-sinopsis">From the New York Times bestselling author of The Atlas Six comes the story of three siblings who, upon the death of their father, are forced to reckon with their long-festering rivalries, dangerous abilities, and the crushing weight of all their unrealized adolescent potential.</p>
+                        </div>
+                        <div class="book-list-actions">
+                            <a href="#reading-list-overlay">Move to list</a>
+                            <button type="button" class="book-list-button">Delete book</button>
+                        </div>
+                    </div>
+
+                </article>
+
+                <hr class="reading-list-separator">
+
+                <article class="book-list-container">
+                    
+                    <div class="book-list">
+                        <span class="list-number">03</span>
+
+                        <div class="book-list-book-cover">
+                            <img srcset="img/38.webp" alt="Orbital Book Cover">
+                        </div>
+
+                    </div>
+
+                    <div class="list-actions">
+                        <div class="list-details">
+                            <h2>Orbital</h2>
+                            <p>Samantha Harvey</p>
+                            <p>2026</p>
+                            <p class="want-to-read-sinopsis">A slender novel of epic power and the winner of the Booker Prize 2024, Orbital deftly snapshots one day in the lives of six women and men traveling through space.</p>
+                        </div>
+                        <div class="book-list-actions">
+                            <a href="#reading-list-overlay">Move to list</a>
+                            <button type="button" class="book-list-button">Delete book</button>
+                        </div>
+                    </div>
+
+                </article>
+            </div>
+            <hr class="reading-list-separator">
+
+        </section>
+
+        <section class="read-list">
+            <h2>Read</h2>
+            <hr class="reading-list-separator">
+            <div class="list-container">
+
+                <article class="book-list-container">
+                    <div class="book-list">
+                        <span class="list-number">01</span>
+                        <div class="book-list-book-cover">
+                            <img srcset="img/39.webp" alt="Martyr! Book Cover">
+                        </div>
+                    </div>
+                    <div class="list-content">
+                        <div class="list-details">
+                            <h2>Martyr!</h2>
+                            <p>Kaveh Akbar</p>
+                            <p class="read-date">12/04</p>
+                        </div>
+                        <div class="list-actions">
+                            <div class="user-review-list">
+                                <p class="review-star-list">★</p>
+                                <p class="review-star-number">5</p>
+                            </div>
+                            <div class="list-button">
+                                <a href="#reading-list-overlay">Edit my review</a>
+                                <button type="button" class="reading-book-list-button">Delete book</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <hr class="reading-list-separator">
+
+                <article class="book-list-container">
+                    <div class="book-list">
+                        <span class="list-number">02</span>
+                        <div class="book-list-book-cover">
+                            <img srcset="img/40.webp" alt="Blue Sisters Book Cover">
+                        </div>
+                    </div>
+                    <div class="list-content">
+                        <div class="list-details">
+                            <h2>Blue Sisters</h2>
+                            <p>Coco Mellors</p>
+                            <p class="read-date">7/07</p>
+                        </div>
+                        <div class="list-actions">
+                            <div class="user-review-list">
+                                <p class="review-star-list">★</p>
+                                <p class="review-star-number">3</p>
+                            </div>
+                            <div class="list-button">
+                                <a href="#reading-list-overlay">Edit my review</a>
+                                <button type="button" class="reading-book-list-button">Delete book</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <hr class="reading-list-separator">
+
+                <article class="book-list-container">
+                    <div class="book-list">
+                        <span class="list-number">03</span>
+                        <div class="book-list-book-cover">
+                            <img srcset="img/41.webp" alt="If You Could See The Sun Book Cover">
+                        </div>
+                    </div>
+                    <div class="list-content">
+                        <div class="list-details">
+                            <h2>If You Could See The Sun</h2>
+                            <p>Ann Liang</p>
+                            <p class="read-date">4/12</p>
+                        </div>
+                        <div class="list-actions">
+                            <div class="user-review-list">
+                                <p class="review-star-list">★</p>
+                                <p class="review-star-number">5</p>
+                            </div>
+                            <div class="list-button">
+                                <a href="#reading-list-overlay">Edit my review</a>
+                                <button type="button" class="reading-book-list-button">Delete book</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <hr class="reading-list-separator">
+
+                
+            </div>
+
+        </section>
+
+        <section class="dnf-list">
+            <h2>DNF</h2>
+            <hr class="reading-list-separator">
+            <div class="list-container">
+                <article class="book-list-container">
+                    
+                    <div class="book-list">
+                        <span class="list-number">01</span>
+
+                        <div class="book-list-book-cover">
+                            <img srcset="img/52.webp" alt="The Night Circus Book Cover">
+                        </div>
+
+                    </div>
+
+                    <div class="list-actions">
+                        <div class="list-details">
+                            <h2>The Night Circus</h2>
+                            <p>Erin Morgenstern</p>
+                            <p>2011</p>
+                            <p class="want-to-read-sinopsis">The circus arrives without warning. No announcements precede it. It is simply there, when yesterday it was not. Within the black-and-white striped canvas tents is an utterly unique experience full of breathtaking amazements. It is called Le Cirque des Rêves, and it is only open at night.</p>
+                        </div>
+                        <div class="book-list-actions">
+                            <a href="#reading-list-overlay">Move to list</a>
+                            <button type="button" class="book-list-button">Delete book</button>
+                        </div>
+                    </div>
+
+                </article>
+                <hr class="reading-list-separator">
+
+                <article class="book-list-container">
+                    
+                    <div class="book-list">
+                        <span class="list-number">02</span>
+
+                        <div class="book-list-book-cover">
+                            <img srcset="img/53.webp" alt="Yolk Book Cover">
+                        </div>
+
+                    </div>
+
+                    <div class="list-actions">
+                        <div class="list-details">
+                            <h2>Yolk</h2>
+                        <p>Mary H. K. Choi</p>
+                        <p>2021</p>
+                        <p class="want-to-read-sinopsis">From New York Times bestselling author Mary H.K. Choi comes a funny and emotional story about two estranged sisters switching places and committing insurance fraud to save one of their lives.</p>
+                        </div>
+                        <div class="book-list-actions">
+                            <a href="#reading-list-overlay">Move to list</a>
+                            <button type="button" class="book-list-button">Delete book</button>
+                        </div>
+                    </div>
+
+                </article>
+
+             
+            </div>
+            <hr class="reading-list-separator">
+
+        </section>
+
+
+    </main>
+
+    <footer>
+        <div class="footer">
+
+            <div class="footer-column-container">
+                <p class="all-rights">
+                    All rights reserved. <br>2026&copy;
+                </p>
+
+                <ul class="footer-column">
+                    <li><a href="#">Sign In</a></li>
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#">FAQS</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+
+                <div class="footer-column">
+
+                    <div class="footer-about">
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-legal">
+                        <ul>
+                            <li><a href="#">Help</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+
+
+                <ul class="footer-column">
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">TikTok</a></li>
+                    <li><a href="#">X</a></li>
+                </ul>
+
+
+                <form class="newsletter">
+                    <label>Newsletter</label>
+                    <a href="#" class="newsletter-link">Newsletter</a>
+                    <div class="newsletter-fields">
+                        <input type="text" id="name" name="name" placeholder="Name">
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <button type="submit" class="newsletter-button">Submit</button>
+                </form>
+
+            </div>
+
+            <div class="logo-footer-container">
+                <img src="assets/graphics/logo-footer.svg" alt="logo footer">
+            </div>
+        
+        </div>
+
+    </footer>
+
+    <div id="reading-list-overlay" class="reading-list-overlay">
+        <div class="reading-list-box">
+
+            <div class="reading-list-header">
+                <div class="reading-list-title">
+                    <h2>My reading lists</h2>
+                </div>
+                <a href="#" class="cross-icon" aria-label="Cerrar">
+                    <img src="assets/graphics/cross-black.svg" alt="cross">
+                </a>
+            </div>
+
+            <div class="reading-list-body">
+                <hr class="reading-list-separator">
+
+                <div class="reading-list-item">
+
+                    <div class="reading-list-cover">
+                        <img src="img/35.webp" alt="Hamnet Book Cover">
+                    </div>
+
+                    <div class="reading-list-info">
+
+                    <div class="number-list">
+                        <span>01</span>
+                    </div>
+
+                    <div class="list-name">
+                        <span>Currently Reading</span>
+                    </div>
+
+                    </div>
+
+                    <div class="add-to-list-button">
+                        <a href="#reading-list-overlay">Add to list</a>
+                    </div>
+
+                </div>
+
+                <hr class="reading-list-separator">
+
+                <div class="reading-list-item">
+
+                    <div class="reading-list-cover">
+                        <img src="img/36.webp" alt="Red City Book Cover">
+                    </div>
+
+                    <div class="reading-list-info">
+
+                    <div class="number-list">
+                        <span>02</span>
+                    </div>
+
+                    <div class="list-name">
+                        <span>Want to read</span>
+                    </div>
+
+                    </div>
+
+                    <div class="add-to-list-button">
+                        <a href="#reading-list-overlay">Add to list</a>
+                        <span class="added-feedback" aria-live="polite">Added!</span>
+                    </div>
+
+                </div>
+
+                <hr class="reading-list-separator">
+
+                <div class="reading-list-item">
+
+                    <div class="reading-list-cover">
+                        <img src="img/39.webp" alt="Martyr! Book Cover">
+                    </div>
+
+                    <div class="reading-list-info">
+
+                    <div class="number-list">
+                        <span>03</span>
+                    </div>
+
+                    <div class="list-name">
+                        <span>Read</span>
+                    </div>
+
+                    </div>
+
+                    <div class="add-to-list-button">
+                        <a href="#reading-list-overlay">Add to list</a>
+                    </div>
+
+                </div>
+
+                <hr class="reading-list-separator">
+
+                <div class="reading-list-item">
+
+                    <div class="reading-list-cover">
+                        <img src="img/52.webp" alt="The Night Circus Book Cover">
+                    </div>
+
+                    <div class="reading-list-info">
+
+                    <div class="number-list">
+                        <span>04</span>
+                    </div>
+
+                    <div class="list-name">
+                        <span>DNF</span>
+                    </div>
+
+                    </div>
+
+                    <div class="add-to-list-button">
+                        <a href="#reading-list-overlay">Add to list</a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

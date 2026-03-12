@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/style.css?v=2">
+    <link rel="stylesheet" href="css/style-mobile.css">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <!-- manifest.json -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#000000">
+</head>
+<body>
+    <header class="top-nav">
+
+        <nav class="main-menu main-menu-left">
+            <ul class="main-menu-nav">
+                <!--<li><a href="index.html" class="active">Explore</a></li> Para cuando el link esté activo-->
+                <li><a href="#" class="menu">Menu</a></li>
+                <li><a href="index.html">Explore</a></li>
+                <li><a href="#">My Books</a></li>
+            </ul>
+        </nav>
+
+        <div class="logo">
+            <a href="#">
+                <img src="assets/graphics/logo.png" alt="logo" id="logo">
+            </a>
+        </div> 
+
+        <nav class="main-menu main-menu-right">
+            <ul class="main-menu-nav">
+                <li><a href="#search-overlay">Search</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="search-overlay" class="search-overlay">
+        <div class="search-overlay-bar">
+            <form class="search-overlay-form" action="search.html" method="get" role="search">
+                <label for="search-overlay-input" class="visually-hidden">Search for title or author</label>
+                <input type="search" id="search-overlay-input" name="q" placeholder="Search for title or author" class="search-overlay-input" autocomplete="off">
+            </form>
+            <a href="#" class="cross-icon" aria-label="Cerrar">
+                <img src="assets/graphics/cross-black.svg" alt="">
+            </a>
+        </div>
+    </div>
+
+    <main>
+        <section>
+            <img src="img/0.png" alt="still life books" class="still-life">
+        </section>
+
+        <section class="staples-section">
+            <h1>Staples in your book shelves</h1>
+            <div class="book-grid-container">
+                
+                <div class="book-grid">
+
+                    <article class="book-card" data-numero="1">
+                        <img src="img/1.webp" alt="Intermezzo Book Cover">
+                        <a href="#reading-list-overlay">Add to list</a> 
+                    </article>
+
+                    <article class="book-card" data-numero="2">
+                        <img src="img/2.webp" alt="Cleopatra and Frankenstein Book Cover">
+                        <a href="#reading-list-overlay">Add to list</a> 
+                    </article>
+
+                    <article class="book-card" data-numero="3">
+                        <img src="img/3.webp" alt="The Strength of a Few Book Cover">
+                        <a href="#reading-list-overlay">Add to list</a> 
+                    </article>
+
+                    <article class="book-card" data-numero="4">
+                        <img src="img/4.webp" alt="The Memory Police Book Cover">
+                        <a href="#reading-list-overlay">Add to list</a> 
+                    </article>
+
+                    <article class="book-card" data-numero="5">
+                        <img src="img/5.webp" alt="Babel Book Cover">
+                        <a href="#reading-list-overlay">Add to list</a> 
+                    </article>
+
+                    <article class="book-card" data-numero="6">
+                        <img src="img/6.webp" alt="Wild Reverence Book Cover">
+                        <a href="#reading-list-overlay">Add to list</a> 
+                    </article>
+
+                    <article class="book-card" data-numero="7">
+                        <img src="img/7.webp" alt="The Secret History Book Cover">
+                        <a href="#reading-list-overlay">Add to list</a> 
+                    </article>
+
+                    <article class="book-card" data-numero="8">
+                        <img src="img/8.webp" alt="My Year Of Rest and Relaxation Book Cover">
+                        <a href="#reading-list-overlay">Add to list</a> 
+                    </article>
+
+                    <article class="book-card" data-numero="9">
+                        <img src="img/9.webp" alt="The Devil Three Times Book Cover">
+                        <a href="#reading-list-overlay">Add to list</a> 
+                    </article>
+
+                    <article class="book-card" data-numero="10">
+                        <img src="img/10.webp" alt="Just For The Summer Book Cover">
+                        <a href="#reading-list-overlay">Add to list</a> 
+                    </article>
+
+                </div>
+
+                <aside class="book-award">
+                    <img src="img/50.png" alt="Book Awards 2026 - Discover the nominees"> 
+                </aside>
+
+            </div>
+        </section>
+
+        <section class="swiper-section">
+
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"> <img src="img/55.png" alt="Ojos de gato"></div>
+                    <div class="swiper-slide"><img src="img/56.png" alt="Ojos chica"></div>
+                    <div class="swiper-slide"> <img src="img/57.png" alt="Caballo"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <section>
+            <div class="article-container">
+                <div class="article-title">
+                    <h3>Just for you: <br> stories to get you out of the reading slump</h3>
+                </div>
+                 <div class="article-text">
+                    <p class="paragraph-1">A reading slump often begins before you notice it. A book stays open on your lap while your mind drifts elsewhere. You keep buying new titles but struggle to finish them. Reading is still important to you, but it feels slightly out of reach. You might blame fatigue, stress, or lack of time, yet the feeling persists even on quieter days. You remember how easily stories used to carry you away, which makes the present distance feel more noticeable. The frustration isn't loud — it's a quiet disappointment that settles in gradually.</p>
+                    <p class="paragraph-2">This isn't about losing your love for books. It's about time, attention, and the quiet noise of daily life. Screens pull you away, schedules fill up, and the space that reading once occupied begins to shrink. What was once effortless starts to require intention, patience, and a gentle return to stillness.
+                    You begin to notice how rare uninterrupted moments have become. Yet within that difficulty lies an invitation to slow down. And when you finally sit with a book again, the experience feels deeper and more meaningful.</p>
+                </div>
+            </div>
+
+            <div class="gallery-container">
+                <article class="book-card" data-numero="11">
+                    <img src="img/11.webp" alt="The Poet Empress Book Cover">
+                    <a href="#reading-list-overlay">Add to list</a> 
+                </article>
+
+                <article class="book-card" data-numero="12">
+                    <img src="img/12.webp" alt="Great Big Beautiful Life Book Cover">
+                    <a href="#reading-list-overlay">Add to list</a> 
+                </article>
+
+                <article class="book-card" data-numero="13">
+                    <img src="img/13.webp" alt="Project Hail Mary Book Cover">
+                    <a href="#reading-list-overlay">Add to list</a> 
+                </article>
+
+                <article class="book-card" data-numero="14">
+                    <a href="book-page.html">
+                        <img src="img/25.webp" alt="We Free The Stars Book Cover">
+                    </a>
+                    <a href="#reading-list-overlay">Add to list</a> 
+                </article>
+
+                <article class="book-card" data-numero="15">
+                    <img src="img/15.webp" alt="Not Quite Dead Yet Book Cover">
+                    <a href="#reading-list-overlay">Add to list</a> 
+                </article>
+
+                <article class="book-card" data-numero="16">
+                    <img src="img/16.webp" alt="Lessons In Chemistry Book Cover">
+                    <a href="#reading-list-overlay">Add to list</a> 
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="popular-genres">Popular genres</h2>
+
+            <div class="genre-container">
+                <article class="genre-card">
+                    <img src="img/42.webp" alt="Romance">
+                    <span class="genre-name">Romance</span>
+                </article>
+
+                 <article class="genre-card">
+                    <img src="img/43.webp" alt="Fantasy">
+                    <span class="genre-name">Fantasy</span>
+                </article>
+
+                 <article class="genre-card">
+                    <img src="img/44.webp" alt="Literary Fiction">
+                    <span class="genre-name">Literary Fiction</span>
+                </article>
+
+                 <article class="genre-card">
+                    <img src="img/45.webp" alt="Thriller">
+                    <span class="genre-name">Thriller</span>
+                </article>
+
+                 <article class="genre-card">
+                    <img src="img/46.webp" alt="Non-Fiction">
+                    <span class="genre-name">Non-Fiction</span>
+                </article>
+
+                 <article class="genre-card">
+                    <img src="img/47.webp" alt="Young Adult">
+                    <span class="genre-name">Young Adult</span>
+                </article>
+            </div>
+        </section>
+
+
+        <section>
+            <h2 class="most-reviewed">Most reviewed books this week</h2>
+                <div class="gallery-container">
+
+                    <article class="book-card" data-numero="17">
+                        <img src="img/17.webp" alt="Crying in H Mart Book Cover">
+                        <a href="#reading-list-overlay">Add to list</a> 
+                    </article>
+
+                    <article class="book-card" data-numero="18">
+                        <img src="img/18.webp" alt="The Familiar Book Cover">
+                        <a href="#reading-list-overlay">Add to list</a> 
+                    </article>
+
+                    <article class="book-card" data-numero="19">
+                        <img src="img/19.webp" alt="One Golden Summer Book Cover">
+                        <a href="#reading-list-overlay">Add to list</a> 
+                    </article>
+
+                    <article class="book-card" data-numero="20">
+                        <img src="img/20.webp" alt="Alchemy Of Secrets Book Cover">
+                        <a href="#reading-list-overlay">Add to list</a> 
+                    </article>
+
+                    <article class="book-card" data-numero="21">
+                        <img src="img/21.webp" alt="The Listeners Book Cover">
+                        <a href="#reading-list-overlay">Add to list</a> 
+                    </article>
+
+                    <article class="book-card" data-numero="22">
+                        <img src="img/22.webp" alt="Shy Girl Book Cover">
+                        <a href="#reading-list-overlay">Add to list</a> 
+                    </article>
+
+                </div>
+
+        </section>
+
+        <section>
+            <div class="container">
+
+                <div class="img-container img-left">
+                    <h3>COZY READS FOR COLD WEATHER</h3>
+                    <p>A special selection of seasonal books to keep you warm and cozy this winter: curated for slow mornings, soft textures, and quiet rituals.</p>
+                    <a href="#" class="button-img">Read more</a>
+                </div>
+
+                <div class="img-container img-right">
+                    <h3>BOOKS TO KEEP YOU UP ALL NIGHT</h3>
+                    <p>Thrilling stories that will keep you saying “just one more chapter” until sunrise. Packed with twists and unforgettable characters you won't be able to put down.</p>
+                    <a href="#" class="button-img">Read more</a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+
+            <div class="footer-column-container">
+                <p class="all-rights">
+                    All rights reserved. <br>2026&copy;
+                </p>
+
+                <ul class="footer-column">
+                    <li><a href="#">Sign In</a></li>
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#">FAQS</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+
+                <div class="footer-column">
+
+                    <div class="footer-about">
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-legal">
+                        <ul>
+                            <li><a href="#">Help</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+
+
+                <ul class="footer-column">
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">TikTok</a></li>
+                    <li><a href="#">X</a></li>
+                </ul>
+
+
+                <form class="newsletter">
+                    <label>Newsletter</label>
+                    <a href="#" class="newsletter-link">Newsletter</a>
+                    <div class="newsletter-fields">
+                        <input type="text" id="name" name="name" placeholder="Name">
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <button type="submit" class="newsletter-button">Submit</button>
+                </form>
+
+            </div>
+
+            <div class="logo-footer-container">
+                <img src="assets/graphics/logo-footer.svg" alt="logo footer">
+            </div>
+        
+        </div>
+
+    </footer>
+
+    <div id="reading-list-overlay" class="reading-list-overlay">
+        <div class="reading-list-box">
+
+            <div class="reading-list-header">
+                <div class="reading-list-title">
+                    <h2>My reading lists</h2>
+                </div>
+                <a href="#" class="cross-icon" aria-label="Cerrar">
+                    <img src="assets/graphics/cross-black.svg" alt="cross">
+                </a>
+            </div>
+
+            <div class="reading-list-body">
+                <hr class="reading-list-separator">
+
+                <div class="reading-list-item">
+
+                    <div class="reading-list-cover">
+                        <img src="img/35.webp" alt="Hamnet Book Cover">
+                    </div>
+
+                    <div class="reading-list-info">
+
+                    <div class="number-list">
+                        <span>01</span>
+                    </div>
+
+                    <div class="list-name">
+                        <span>Currently Reading</span>
+                    </div>
+
+                    </div>
+
+                    <div class="add-to-list-button">
+                        <a href="#reading-list-overlay">Add to list</a>
+                    </div>
+
+                </div>
+
+                <hr class="reading-list-separator">
+
+                <div class="reading-list-item">
+
+                    <div class="reading-list-cover">
+                        <img src="img/36.webp" alt="Red City Book Cover">
+                    </div>
+
+                    <div class="reading-list-info">
+
+                        <div class="number-list">
+                            <span>02</span>
+                        </div>
+
+                        <div class="list-name">
+                            <span>Want to read</span>
+                        </div>
+
+                    </div>
+
+                    <div class="add-to-list-button">
+                        <a href="#reading-list-overlay">Add to list</a>
+                        <span class="added-feedback" aria-live="polite">Added!</span>
+                    </div>
+
+                </div>
+
+                <hr class="reading-list-separator">
+
+                <div class="reading-list-item">
+
+                    <div class="reading-list-cover">
+                        <img src="img/39.webp" alt="Martyr! Book Cover">
+                    </div>
+
+                    <div class="reading-list-info">
+
+                        <div class="number-list">
+                            <span>03</span>
+                        </div>
+
+                        <div class="list-name">
+                            <span>Read</span>
+                        </div>
+
+                    </div>
+
+                    <div class="add-to-list-button">
+                        <a href="#reading-list-overlay">Add to list</a>
+                    </div>
+
+                </div>
+
+                <hr class="reading-list-separator">
+
+                <div class="reading-list-item">
+
+                    <div class="reading-list-cover">
+                        <img src="img/52.webp" alt="The Night Circus Book Cover">
+                    </div>
+
+                    <div class="reading-list-info">
+
+                        <div class="number-list">
+                            <span>04</span>
+                        </div>
+
+                        <div class="list-name">
+                            <span>DNF</span>
+                        </div>
+
+                    </div>
+
+                    <div class="add-to-list-button">
+                        <a href="#reading-list-overlay">Add to list</a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>

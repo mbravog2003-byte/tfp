@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Page</title>
+    <link rel="stylesheet" href="css/style.css?v=2">
+    <link rel="stylesheet" href="css/style-mobile.css">
+
+    <!-- manifest.json -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#000000">
+</head>
+<body>
+    <header class="top-nav">
+
+        <nav class="main-menu main-menu-left">
+            <ul class="main-menu-nav">
+                <!--<li><a href="index.html" class="active">Explore</a></li> Para cuando el link esté activo-->
+                <li><a href="#" class="menu">Menu</a></li>
+                <li><a href="index.html">Explore</a></li>
+                <li><a href="#">My Books</a></li>
+            </ul>
+        </nav>
+
+        <div class="logo">
+            <a href="#">
+                <img src="assets/graphics/logo.png" alt="logo" id="logo">
+            </a>
+        </div> 
+
+        <nav class="main-menu main-menu-right">
+            <ul class="main-menu-nav">
+                <li><a href="#search-overlay">Search</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="search-overlay" class="search-overlay">
+        <div class="search-overlay-bar">
+            <form class="search-overlay-form" action="search.html" method="get" role="search">
+                <label for="search-overlay-input" class="visually-hidden">Search for title or author</label>
+                <input type="search" id="search-overlay-input" name="q" placeholder="Search for title or author" class="search-overlay-input" autocomplete="off">
+            </form>
+            <a href="#" class="cross-icon" aria-label="Cerrar">
+                <img src="assets/graphics/cross-black.svg" alt="">
+            </a>
+        </div>
+    </div>
+
+    <main>
+        <section>
+            <div class="book-page-container">
+
+                <div class="left-column" data-numero="23">
+
+                    <div class="book-general-info">
+                        <div class="book-header">
+                            <p>Sands of Arawiya #2</p>
+                            <h1>"We free The Stars"</h1>
+                        </div>
+
+                        <div class="author-info">
+                            <h2>About the Author</h2>
+                            <p>Hafsah Faizal is a New York Times bestselling, award-winning author known for "We Hunt the Flame", "We Free the Stars" and "A Tempest of Tea". Named to Forbes 30 Under 30, she divides her time between writing, design, gaming, and travel, and currently lives in Texas.</p>
+                        </div>
+
+                    </div>
+                    
+
+                    <div class="book-buttons">
+                        <a href="#reading-list-overlay" class="add-to-list">Add to List</a>
+                        <a href="#review-form-overlay" class="review-now">Review</a>
+                    </div>
+
+                    <div class="book-cover">
+                        <img src="img/23.webp" alt="We Free The Stars Book Cover">
+                    </div>
+
+                    <div class="book-footer">
+                        <div class="stars">
+                            <div class="star-rating">
+                                <img src="assets/graphics/star.svg" alt="star">
+                            </div>  
+
+                            <div class="star-count">
+                                <p>4.5</p>
+                            </div>
+                        </div>
+
+                        <div class="book-info-container">
+                        <div class="book-info">
+                            <p>Translated to: French, Polish, German, Spanish... +10 <br> UK paperback ISBN: 978-1529034110</p>
+                        </div>
+
+                        <div class="book-age">
+                            <p>Recommended age: 14-18+</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="right-column">
+                    <div class="book-description">
+                        <div class="paragraph">
+                        <p>The battle on Sharr is over. The dark forest has fallen. Altair may be captive, but Zafira, Nasir, and Kifah are bound for Sultan's Keep, determined to finish the plan he set in motion: restoring the hearts of the Sisters of Old to the minarets of each caliphate, and finally returning magic to all of Arawiya. But they are low on resources and allies alike, and the kingdom teems with fear of the Lion of the Night's return.</p>
+                        <p>As the zumra plots to overthrow the kingdom's darkest threat, Nasir fights to command the magic in his blood. He must learn to hone his power into a weapon, to wield not only against the Lion but against his father, trapped under the Lion's control. Zafira battles a very different darkness festering in her through her bond with the Jawarat—a darkness that hums with voices, pushing her to the brink of her sanity and to the edge of a chaos she dare not unleash. In spite of the darkness enclosing ever faster, Nasir and Zafira find themselves falling into a love they can't stand to lose…but time is running out to achieve their ends, and if order is to be restored, drastic sacrifices will have to be made. <br> <br> Lush and striking, hopeful and devastating,"We Free the Stars" is the masterful conclusion to the Sands of Arawiya duology by New York Times-bestselling author Hafsah Faizal.</p>
+
+
+                        </div>
+                    </div>
+
+                    <div class="book-details">
+                        <div class="book-detail-item">
+                            <span class="detail-label">Length</span>
+                            <span class="detail-value">464-512 pages</span>
+                        </div>
+                        <div class="book-detail-item">
+                            <span class="detail-label">Released</span>
+                            <span class="detail-value">19/01/2021</span>
+                        </div>
+                        <div class="book-detail-item">
+                            <span class="detail-label">Publisher</span>
+                            <span class="detail-value">Farrar, Straus and Giroux</span>
+                        </div>
+                        <div class="book-detail-item">
+                            <span class="detail-label">Available formats</span>
+                            <span class="detail-value">Hardcover, paperback, ebook, audiobook</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="more-from-author">
+        
+            <div class="left-column-author">
+                <h2 class="arawiya-series-h2">Explore the “Sands of Arawiya” Series</h2>
+
+                <div class="series-container">
+                    <article class="book-card">
+                        <img src="img/24.webp" alt="We Hunt The Flame Book Cover">
+                        <p class="book-number">Book one</p>
+                        <p class="book-title">We Hunt The Flame</p>
+                    </article>
+
+                    <article class="book-card">
+                        <img src="img/25.webp" alt="We Free the Stars Book Cover">
+                        <p class="book-number">Book two</p>     
+                        <p class="book-title">We Free the Stars</p>
+                    </article>
+                
+                </div>
+            </div>
+
+            <div class="right-column-author">
+                <h2 class="more-author-h2">More from the author</h2>
+                <div class="author-other-books">
+                    <article class="book-card" data-numero="24">
+                        <img src="img/26.webp" alt="A Tempest of Tea Book Cover">
+                        <a href="#reading-list-overlay">Add to list</a> 
+                    </article>
+
+                    <article class="book-card" data-numero="25">
+                        <img src="img/27.webp" alt="A Steeping of Blood Book Cover">
+                        <a href="#reading-list-overlay">Add to list</a> 
+                    </article>
+
+                    <article class="book-card" data-numero="26">
+                        <img src="img/28.webp" alt="The Wishless Ones Book Cover">
+                        <a href="#reading-list-overlay">Add to list</a> 
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="quote">
+            <h2 class="quote-h2">Quotes</h2>
+
+            <div class="quote-container">
+                <div class="quote-card">
+                    <p>“We were not born to fight, but our cradles were built from struggles and hardship. Pens, swords, sticks—weapons shoved into our fists as soon as we're old enough to grasp them. So we fight because the world will cut our throats otherwise. We fight, because we won't go down without one."</p>
+                </div>
+
+                <div class="quote-card">
+                    <p>“Darkness doesn't need to be destroyed. We need the dark as much as we need light. It makes us bold, as much as it makes us afraid.” She smiled. “Darkness needs only to be tamed.”</p>
+                </div>
+
+                <div class="quote-card">
+                    <p>“If I told you my name, would you bow?” His voice was soft. A melancholy caress. He lifted his chin when understanding dawned on her face. “Or would you flee?”</p>
+                </div>
+
+                <div class="quote-card">
+                    <p>“We hunt the flame, the light in the darkness, the good this world deserves.”</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <div class="reviews">
+
+
+                <div class="review-stars-container">
+                    <div class="review-stars">
+
+                        <div class="star-rating">
+                            <h2 class="review-h2">Reviews</h2>
+                            <p class="review-count">(5339 ratings)</p>
+                        </div>
+
+                        <div class="average-rating">
+                            <img src="assets/graphics/star.svg" alt="star">
+                            <p class="reviews-average">4.5</p>
+                        </div>
+
+                    </div>  
+
+                    <div class="review-breakdown">
+
+                        <div class="review-row">
+                            <p class="review-star">★</p>
+                            <p class="review-number">5</p>
+                            <div class="review-bar">
+                                <div class="review-bar-fill" style="width: 44%;"></div>
+                            </div>
+                            <p class="review-percent">44%</p>
+                        </div>
+
+                        <div class="review-row">
+                            <p class="review-star">★</p>
+                            <p class="review-number">4</p>
+                            <div class="review-bar">
+                                <div class="review-bar-fill" style="width: 36%;"></div>
+                            </div>
+                            <p class="review-percent">36%</p>
+                        </div>
+
+                        <div class="review-row">
+                            <p class="review-star">★</p>
+                            <p class="review-number">3</p>
+                            <div class="review-bar">
+                                <div class="review-bar-fill" style="width: 15%;"></div>
+                            </div>
+                            <p class="review-percent">15%</p>
+                        </div>
+
+                         <div class="review-row">
+                            <p class="review-star">★</p>
+                            <p class="review-number">2</p>
+                            <div class="review-bar">
+                                <div class="review-bar-fill" style="width: 5%;"></div>
+                            </div>
+                            <p class="review-percent">3%</p>
+                        </div>
+
+                         <div class="review-row">
+                            <p class="review-star">★</p>
+                            <p class="review-number">1</p>
+                            <div class="review-bar">
+                                <div class="review-bar-fill" style="width: 0%;"></div>
+                            </div>
+                            <p class="review-percent">0%</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="book-tags">
+                    <div class="this-book-is">
+                        <h2 class="this-book-is-h2">This book is...</h2>
+
+                        <div class="book-tag-container">
+
+                            <p class="book-tag">Adventurous</p>
+                            <p class="book-tag">Moving</p>
+                            <p class="book-tag">Fantasy</p>
+                            <p class="book-tag">YA Fantasy</p>
+                            <p class="book-tag">Arab-inspired</p>
+                            <p class="book-tag">Romance</p>
+                            <p class="book-tag">Fast-paced</p>
+                            <p class="book-tag">High stakes</p>
+                                
+                            <p class="book-tag">Multiple POVs</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="trigger-warning">
+                        <h2 class="trigger-warning-h2">Trigger Warnings</h2>
+
+                        <div class="trigger-warning-container">
+
+                            <p class="book-trigger">Death and grief</p>
+                            <p class="book-trigger">Murder</p>
+                            <p class="book-trigger">War</p>
+                            <p class="book-trigger">Kidnapping and imprisonment</p>
+                            <p class="book-trigger">Violence</p>
+                            <p class="book-trigger">Abuse</p>
+                            <p class="book-trigger">Misogyny</p>
+                            <p class="book-trigger">Gore</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+        <section class="user-review">
+            
+
+            <article class="review-card">
+                <hr class="review-separator">
+                <div class="review-card-container">
+
+                    <div class="review-author">
+                        <img src="img/51.webp" alt="Review author avatar">
+                        <div class="review-data">  
+                            <p class="review-author-name">Chelsy G</p>
+                            <p class="review-date">Reviewed 3 weeks ago</p>
+                        </div>
+                    </div>
+
+                    <div class="review-content">
+                        <p>I really loved this book. We Free the Stars feels big and emotional, but also very character-driven. The world is rich and atmospheric, and the tension—both political and romantic—kept me hooked. Zafira and Nasir's journey feels intense and earned, and the themes about power, faith, and identity really stuck with me. A strong, satisfying finale for the duology.</p>
+
+                        <div class="review-icon">
+                            <img src="assets/graphics/icons.svg" alt="icons">
+                        </div>
+                    </div>
+
+                    <div class="review-user-stars">
+                        <img src="assets/graphics/5stars.svg" alt="5stars">
+                    </div>
+
+
+                </div>
+
+            </article>
+
+
+            <article class="review-card">
+                <hr class="review-separator">
+                <div class="review-card-container">
+
+                    <div class="review-author">
+                        <img src="img/51.webp" alt="Review author avatar">
+                        <div class="review-data">  
+                            <p class="review-author-name">SammY</p>
+                            <p class="review-date">Reviewed 2 days ago</p>
+                        </div>
+                    </div>
+
+                    <div class="review-content">
+                        <p>I really enjoyed it. The worldbuilding is stunning and the emotional stakes are high, especially in the relationships and political conflicts. The characters feel complex and human, and the atmosphere is immersive from start to finish. My only issue was the pacing in the middle—it felt a bit slow at times, with some scenes dragging longer than necessary. Still, the ending was powerful and worth it. Overall, a beautiful and compelling fantasy read.</p>
+
+                        <div class="review-icon">
+                            <img src="assets/graphics/icons.svg" alt="icons">
+                        </div>
+                    </div>
+
+                    <div class="review-user-stars">
+                        <img src="assets/graphics/5stars.svg" alt="5stars">
+                    </div>
+
+
+                </div>
+
+            </article>
+
+        
+            <article class="review-card">
+                <hr class="review-separator">
+                <div class="review-card-container">
+
+                    <div class="review-author">
+                        <img src="img/51.webp" alt="Review author avatar">
+                        <div class="review-data">  
+                            <p class="review-author-name">inkandcoffee</p>
+                            <p class="review-date">Reviewed 3 months ago</p>
+                        </div>
+                    </div>
+
+                    <div class="review-content">
+                        <p>I liked this book, but it didn’t fully click for me. The setting and concept are fascinating, and the characters are compelling, but the pacing felt uneven and I struggled to stay engaged in the middle sections. Still, the ending was strong and I can see why so many people love it.</p>
+
+
+                        <div class="review-icon">
+                            <img src="assets/graphics/icons.svg" alt="icons">
+                        </div>
+                    </div>
+
+                    <div class="review-user-stars">
+                        <img src="assets/graphics/3stars.svg" alt="3stars">
+                    </div>
+
+
+                </div>
+
+            </article>
+
+            <article class="review-card">
+                <hr class="review-separator">
+                <div class="review-card-container">
+
+                    <div class="review-author">
+                        <img src="img/51.webp" alt="Review author avatar">
+                        <div class="review-data">  
+                            <p class="review-author-name">Althea</p>
+                            <p class="review-date">Reviewed 1 month ago</p>
+                        </div>
+                    </div>
+
+                    <div class="review-content">
+                        <p>A beautiful and immersive sequel. The worldbuilding is incredible and the themes of power and faith are really interesting. Some parts felt a bit dense, but overall it was a very rewarding read. I especially loved the emotional moments between the main characters.  </p>
+
+                        <div class="review-icon">
+                            <img src="assets/graphics/icons.svg" alt="icons">
+                        </div>
+                    </div>
+
+                    <div class="review-user-stars">
+                        <img src="assets/graphics/3,25stars.svg" alt="3,25stars">
+                    </div>
+
+
+                </div>
+
+            </article>
+
+            <article class="review-card">
+                <hr class="review-separator">
+                <div class="review-card-container">
+
+                    <div class="review-author">
+                        <img src="img/51.webp" alt="Review author avatar">
+                        <div class="review-data">  
+                            <p class="review-author-name">Chelsy G</p>
+                            <p class="review-date">Reviewed 3 weeks ago</p>
+                        </div>
+                    </div>
+
+                    <div class="review-content">
+                        <p>This was an incredible sequel. The world feels so vivid and immersive, and the emotional stakes are intense without feeling forced. I loved how the story balances action, politics, and character development. The only reason it's not a full five stars is that a few sections felt slightly long, but overall it was deeply engaging and beautifully written.</p>
+
+                        <div class="review-icon">
+                            <img src="assets/graphics/icons.svg" alt="icons">
+                        </div>
+                    </div>
+
+                    <div class="review-user-stars">
+                        <img src="assets/graphics/4,5stars.svg" alt="4,5stars">
+                    </div>
+
+
+                </div>
+            <hr class="review-separator">
+
+            </article>  
+
+            <p class="more">More</p>
+
+        </section>
+
+
+
+        <section>
+            <h2 class="similar-h2">Similar</h2>
+            <div class="gallery-container">
+                <article class="book-card" data-numero="27">
+                    <img src="img/29.webp" alt="The Knight And The Moth Book Cover">
+                    <a href="#reading-list-overlay">Add to list</a>
+                </article>
+
+                <article class="book-card" data-numero="28">
+                    <img src="img/30.webp" alt="Divine Rivals Book Cover">
+                    <a href="#reading-list-overlay">Add to list</a>
+                </article>
+
+                <article class="book-card" data-numero="29">
+                    <img src="img/31.webp" alt="The Wrath And The Dawn Book Cover">
+                    <a href="#reading-list-overlay">Add to list</a>
+                </article>
+
+                <article class="book-card" data-numero="30">
+                    <img src="img/32.webp" alt="The Raven Scholar Book Cover">
+                    <a href="#reading-list-overlay">Add to list</a>
+                </article>
+
+                <article class="book-card" data-numero="31">
+                    <img src="img/33.webp" alt="A Song To Drown Rivers Book Cover">
+                    <a href="#reading-list-overlay">Add to list</a>
+                </article>
+
+                <article class="book-card" data-numero="32">
+                    <img src="img/34.webp" alt="These Violent Delights Book Cover">
+                    <a href="#reading-list-overlay">Add to list</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+
+            <div class="footer-column-container">
+                <p class="all-rights">
+                    All rights reserved. <br>2026&copy;
+                </p>
+
+                <ul class="footer-column">
+                    <li><a href="#">Sign In</a></li>
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#">FAQS</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+
+                <div class="footer-column">
+
+                    <div class="footer-about">
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-legal">
+                        <ul>
+                            <li><a href="#">Help</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+
+
+                <ul class="footer-column">
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">TikTok</a></li>
+                    <li><a href="#">X</a></li>
+                </ul>
+
+
+                <form class="newsletter">
+                    <label>Newsletter</label>
+                    <a href="#" class="newsletter-link">Newsletter</a>
+                    <div class="newsletter-fields">
+                        <input type="text" id="name" name="name" placeholder="Name">
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <button type="submit" class="newsletter-button">Submit</button>
+                </form>
+
+            </div>
+
+            <div class="logo-footer-container">
+                <img src="assets/graphics/logo-footer.svg" alt="logo footer">
+            </div>
+        
+        </div>
+
+    </footer>
+
+    <div id="reading-list-overlay" class="reading-list-overlay">
+        <div class="reading-list-box">
+
+            <div class="reading-list-header">
+                <div class="reading-list-title">
+                    <h2>My reading lists</h2>
+                </div>
+                <a href="#" class="cross-icon" aria-label="Cerrar">
+                    <img src="assets/graphics/cross-black.svg" alt="cross">
+                </a>
+            </div>
+
+            <div class="reading-list-body">
+                <hr class="reading-list-separator">
+
+                <div class="reading-list-item">
+
+                    <div class="reading-list-cover">
+                        <img src="img/35.webp" alt="Hamnet Book Cover">
+                    </div>
+
+                    <div class="reading-list-info">
+
+                    <div class="number-list">
+                        <span>01</span>
+                    </div>
+
+                    <div class="list-name">
+                        <span>Currently Reading</span>
+                    </div>
+
+                    </div>
+
+                    <div class="add-to-list-button">
+                        <a href="#reading-list-overlay">Add to list</a>
+                    </div>
+
+                </div>
+
+                <hr class="reading-list-separator">
+
+                <div class="reading-list-item">
+
+                    <div class="reading-list-cover">
+                        <img src="img/36.webp" alt="Red City Book Cover">
+                    </div>
+
+                    <div class="reading-list-info">
+
+                        <div class="number-list">
+                            <span>02</span>
+                        </div>
+
+                        <div class="list-name">
+                            <span>Want to read</span>
+                        </div>
+
+                    </div>
+
+                    <div class="add-to-list-button">
+                        <a href="#reading-list-overlay">Add to list</a>
+                        <span class="added-feedback" aria-live="polite">Added!</span>
+                    </div>
+
+                </div>
+
+                <hr class="reading-list-separator">
+
+                <div class="reading-list-item">
+
+                    <div class="reading-list-cover">
+                        <img src="img/39.webp" alt="Martyr! Book Cover">
+                    </div>
+
+                    <div class="reading-list-info">
+
+                        <div class="number-list">
+                            <span>03</span>
+                        </div>
+
+                        <div class="list-name">
+                            <span>Read</span>
+                        </div>
+
+                    </div>
+
+                    <div class="add-to-list-button">
+                        <a href="#reading-list-overlay">Add to list</a>
+                    </div>
+
+                </div>
+
+                <hr class="reading-list-separator">
+
+                <div class="reading-list-item">
+
+                    <div class="reading-list-cover">
+                        <img src="img/52.webp" alt="The Night Circus Book Cover">
+                    </div>
+
+                    <div class="reading-list-info">
+
+                        <div class="number-list">
+                            <span>04</span>
+                        </div>
+
+                        <div class="list-name">
+                            <span>DNF</span>
+                        </div>
+
+                    </div>
+
+                    <div class="add-to-list-button">
+                        <a href="#reading-list-overlay">Add to list</a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div id="review-form-overlay" class="form-overlay">
+        <form class="review-overlay">
+            <div class="review-overlay-header">
+
+                <div class="review-overlay-title">
+                    <h2>Review</h2>
+                </div>
+
+                <a href="#" class="cross-icon" aria-label="Cerrar">
+                    <img src="assets/graphics/cross-white.svg" alt="cross">
+                </a>
+
+            </div>
+
+            <hr class="form-separator">
+
+            <div class="how-was-the-book">
+                <label>How was the book overall?</label>
+
+                <div id="review-star-rating-app" class="review-stars-vue-wrapper"></div>
+
+            </div>
+
+            <hr class="form-separator">
+
+            <div class="review-dates">
+                <div class="date-field">
+                   
+                    <label for="started">Started</label>
+                    <input type="text" id="started" name="started" placeholder="00/00/0000" maxlength="10" inputmode="numeric" autocomplete="off">
+
+                </div>
+
+                <div class="date-field">
+                    <label for="finished">Finished</label>
+                    <input type="text" id="finished" name="finished" placeholder="00/00/0000" maxlength="10" inputmode="numeric" autocomplete="off">
+                </div>
+
+            </div>
+
+            <hr class="form-separator">
+
+            <div class="review-section">
+                <div class="review-section-title">
+                    <p>Characters</p>
+                </div>
+                <div class="review-tags">
+                    <button type="button" class="review-tag">Flat</button>
+                    <button type="button" class="review-tag">Morally gray</button>
+                    <button type="button" class="review-tag">Forgettable</button>
+                    <button type="button" class="review-tag">Distant</button>
+                    <button type="button" class="review-tag">Unique</button>
+                    <button type="button" class="review-tag">Unlikable</button>
+                    <button type="button" class="review-tag">Relatable</button>
+                    <button type="button" class="review-tag">Inconsistent</button>
+                    <button type="button" class="review-tag">Multilayered</button>
+                </div>
+
+            </div>
+
+            <hr class="form-separator">
+
+            <div class="review-section">
+                <div class="review-section-title">
+                    <p>Plot</p>
+                </div>
+                <div class="review-tags">
+                    <button type="button" class="review-tag">Slow</button>
+                    <button type="button" class="review-tag">Boring</button>
+                    <button type="button" class="review-tag">Addictive</button>
+                    <button type="button" class="review-tag">Surprising</button>
+                    <button type="button" class="review-tag">Fast paced</button>
+                    <button type="button" class="review-tag">Confusing</button>
+                    <button type="button" class="review-tag">Rushed</button>
+                    <button type="button" class="review-tag">Repetitive</button>
+                    <button type="button" class="review-tag">Uneven pacing</button>
+                    <button type="button" class="review-tag">Well structured</button>
+                    <button type="button" class="review-tag">Loose ends</button>
+                    <button type="button" class="review-tag">Plot holes</button>
+                </div>
+
+            </div>
+
+            <hr class="form-separator">
+
+            <div class="review-section">
+                <div class="review-section-title">
+                    <p>Setting</p>
+                </div>
+                <div class="review-tags">
+                    <button type="button" class="review-tag">Enchanted</button>
+                    <button type="button" class="review-tag">Old</button>
+                    <button type="button" class="review-tag">Atmospheric</button>
+                    <button type="button" class="review-tag">Dark</button>
+                    <button type="button" class="review-tag">Realistic</button>
+                    <button type="button" class="review-tag">Eerie</button>
+                    <button type="button" class="review-tag">Beautiful</button>
+                    <button type="button" class="review-tag">Harsh</button>
+                    <button type="button" class="review-tag">Futuristic</button>
+                    <button type="button" class="review-tag">Historical</button>
+                    <button type="button" class="review-tag">Mysterious</button>
+                </div>
+
+            </div>
+
+            <hr class="form-separator">
+
+            <div class="review-section">
+                <div class="review-section-title">
+                    <p>Style</p>
+                </div>
+                <div class="review-tags">
+                    <button type="button" class="review-tag">Descriptive</button>
+                    <button type="button" class="review-tag">Straightforward</button>
+                    <button type="button" class="review-tag">Bland</button>
+                    <button type="button" class="review-tag">Poetic</button>
+                    <button type="button" class="review-tag">Bad writing</button>
+                    <button type="button" class="review-tag">Easy to read</button>
+                    <button type="button" class="review-tag">Flowery</button>
+                    <button type="button" class="review-tag">Witty</button>
+                </div>
+            </div>
+
+            <hr class="form-separator">
+
+            <div class="review-more-thoughts">
+                <textarea id="review" name="review" placeholder="More thoughts..."></textarea>
+            </div>
+
+            <p id="review-saved-message" class="review-saved-message" aria-live="polite" hidden>Saved</p>
+            <div class="review-form-buttons">
+                <button type="button" id="review-form-save">Save</button>
+                <button type="button" id="review-form-delete">Delete</button>
+            </div>
+
+        </form>
+    </div>
+
+      <!--Interacción reseña estrellas Vue y la librería Vue Star Rating-->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/vue-star-rating@next/dist/VueStarRating.umd.min.js"></script>
+    <script>
+      (function () {
+        const mountEl = document.getElementById('review-star-rating-app');
+        if (!mountEl) return;
+        const StarRatingComponent = typeof VueStarRating !== 'undefined' ? (VueStarRating.default || VueStarRating) : null;
+        if (!Vue || !StarRatingComponent) return;
+        const app = Vue.createApp({
+          data: function () {
+            let rating = 0;
+            try {
+              const raw = localStorage.getItem('reviewFormData');
+              if (raw) {
+                const data = JSON.parse(raw);
+                if (typeof data.rating === 'number') rating = data.rating;
+              }
+            } catch (e) {}
+            return { rating: rating };
+          },
+          template:
+            '<div class="review-stars-vue">' +
+              '<input type="hidden" name="rating" id="review-rating-input" :value="rating">' +
+              '<star-rating v-model:rating="rating" :increment="0.5" :show-rating="false" :round-start-rating="false" :star-size="25" :border-width="2" border-color="#ffffff" inactive-color="black" active-color="#ffffff"></star-rating>' +
+            '</div>'
+        });
+        app.component('star-rating', StarRatingComponent);
+        const starRatingVm = app.mount('#review-star-rating-app');
+        window.__reviewFormResetStars = function () {
+          if (starRatingVm && typeof starRatingVm.rating !== 'undefined') starRatingVm.rating = 0;
+        };
+      })();
+    </script>
+    <script src="js/review-form-data.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      (function () {
+        const saveBtn = document.getElementById('review-form-save');
+        if (saveBtn && typeof getReviewFormData === 'function' && typeof saveReviewFormDataToStorage === 'function') {
+          saveBtn.addEventListener('click', function () {
+            const data = getReviewFormData();
+            saveReviewFormDataToStorage(data);
+            const savedMsg = document.getElementById('review-saved-message');
+            if (savedMsg) {
+              savedMsg.removeAttribute('hidden');
+              savedMsg.classList.remove('review-saved-message--fade-out');
+              window.clearTimeout(window.__reviewSavedMessageTimeout);
+              window.__reviewSavedMessageTimeout = window.setTimeout(function () {
+                savedMsg.classList.add('review-saved-message--fade-out');
+                window.setTimeout(function () {
+                  savedMsg.setAttribute('hidden', '');
+                  savedMsg.classList.remove('review-saved-message--fade-out');
+                  const scrollY = window._scrollBeforeOverlay != null ? window._scrollBeforeOverlay : (window.scrollY || window.pageYOffset);
+                  if (history.replaceState) history.replaceState(null, '', window.location.pathname + window.location.search);
+                  else window.location.hash = '';
+                  window.scrollTo(0, scrollY);
+                }, 350);
+              }, 2500);
+            } else {
+              const scrollY = window._scrollBeforeOverlay != null ? window._scrollBeforeOverlay : (window.scrollY || window.pageYOffset);
+              if (history.replaceState) history.replaceState(null, '', window.location.pathname + window.location.search);
+              else window.location.hash = '';
+              window.scrollTo(0, scrollY);
+            }
+          });
+        }
+        const deleteBtn = document.getElementById('review-form-delete');
+        if (deleteBtn && typeof clearReviewFormDataFromStorage === 'function' && typeof clearReviewFormFields === 'function') {
+          deleteBtn.addEventListener('click', function () {
+            clearReviewFormDataFromStorage();
+            clearReviewFormFields();
+            if (typeof window.__reviewFormResetStars === 'function') window.__reviewFormResetStars();
+          });
+        }
+        if (typeof restoreReviewFormFromStorage === 'function') restoreReviewFormFromStorage();
+      })();
+    </script>
+</body>
+</html>
+
