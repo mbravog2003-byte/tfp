@@ -1,13 +1,5 @@
-/*
-  Orden del archivo:
-  1. Carrusel (Swiper) en la página de inicio.
-  2. Overlays: guardar y restaurar scroll al abrir/cerrar.
-  3. Lista "Want to read": guardar en localStorage y mostrar en overlay.
-  4. Profile: pintar libros guardados y permitir borrarlos.
-  5. Review: al clic en un tag del formulario, marcar/desmarcar.
-*/
 
-// ========== 1. Swiper (carrusel en index) ==========
+//Swiper 
 document.addEventListener("DOMContentLoaded", () => {
 
   const swiper = new Swiper(".mySwiper", {
@@ -30,10 +22,10 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// ========== Ruta base para portadas (solo nombre de archivo en data.js; aquí se define la carpeta para transportar el proyecto) ==========
+
 const IMG_PORTADA_BASE = 'img/';
 
-// ========== 2. Overlays: guardar scroll al abrir y restaurarlo al cerrar (X o cierre programático) ==========
+// Overlays scroll
 const ID_READING_LIST_OVERLAY = 'reading-list-overlay';
 const ID_REVIEW_FORM_OVERLAY = 'review-form-overlay';
 const LINK_READING_LIST_OVERLAY = '#' + ID_READING_LIST_OVERLAY;
@@ -104,7 +96,7 @@ function alCerrarSearchOverlayAlClicFondo(evento) {
 }
 document.addEventListener('click', alCerrarSearchOverlayAlClicFondo, true);
 
-// ========== 3. Want to read: lista en localStorage (compartido por overlay y profile) ==========
+// Want to read: lista en localStorage 
 const WANT_TO_READ_STORAGE_KEY = 'wantToReadBooks';
 const LIST_NAME_WANT_TO_READ = 'Want to read';
 
@@ -124,9 +116,8 @@ function saveWantToRead(arr) {
 }
 
 
-// ========== 3 (cont.). Want to read: añadir libros desde el overlay (index y book-page). Requiere data.js (libros). ==========
-// El siguiente código solo se ejecuta en index y book-page, donde existe la variable "libros" (data.js).
-// En Profile no se carga data.js, así que "libros" no existe; por eso se comprueba antes.
+// Want to read: añadir libros desde el overlay (index y book-page)
+
 if (typeof libros !== 'undefined') {
 
   function getBookByNumero(numero) {
@@ -240,7 +231,7 @@ if (typeof libros !== 'undefined') {
 }
 
 
-// ========== 4. Profile Want to read: pinta libros guardados y permite borrarlos. Escucha storage para actualizar sin recargar. ==========
+//Profile Want to read: pinta libros guardados y permite borrarlos.
 function formatNumber(n) {
   return n < 10 ? '0' + n : String(n);
 }
@@ -339,7 +330,7 @@ function alCambiarStorage(evento) {
 window.addEventListener('storage', alCambiarStorage);
 
 
-// ========== 5. Book-page: review-tags en overlay 2 — al hacer clic, marcar/desmarcar tag ==========
+// Reviw tags interacción
 function alClicEnReviewTag(evento) {
   const tag = evento.target && evento.target.closest && evento.target.closest('.review-tag');
   if (!tag) return;
@@ -349,7 +340,7 @@ function alClicEnReviewTag(evento) {
 document.addEventListener('click', alClicEnReviewTag);
 
 
-// ========== 6. PWA: registro del Service Worker ==========
+// PWA: registro del Service Worker 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function () {
     navigator.serviceWorker.register('sw.js').then(function (reg) {
